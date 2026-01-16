@@ -23,26 +23,26 @@ const OurProductsSection = () => {
       description: "Enterprise analytics with predictive modeling capabilities to forecast market trends.",
       image: QuasarDataImage
     },
-    {
-      category: "Healthcare",
-      title: "MediFlow",
-      description: "Integrated healthcare management system streamlining patient care, medical records, and hospital operations for improved efficiency."
-    },
-    {
-      category: "E-commerce",
-      title: "CommerceHub",
-      description: "Unified e-commerce platform enabling seamless online retail experiences with advanced inventory and payment processing."
-    },
-    {
-      category: "Education",
-      title: "EduSphere",
-      description: "Comprehensive learning management system connecting students, educators, and institutions with innovative digital tools."
-    },
-    {
-      category: "Security",
-      title: "CyberShield",
-      description: "Enterprise-grade cybersecurity solution protecting digital assets and networks from advanced threats and vulnerabilities."
-    }
+    // {
+    //   category: "Healthcare",
+    //   title: "MediFlow",
+    //   description: "Integrated healthcare management system streamlining patient care, medical records, and hospital operations for improved efficiency."
+    // },
+    // {
+    //   category: "E-commerce",
+    //   title: "CommerceHub",
+    //   description: "Unified e-commerce platform enabling seamless online retail experiences with advanced inventory and payment processing."
+    // },
+    // {
+    //   category: "Education",
+    //   title: "EduSphere",
+    //   description: "Comprehensive learning management system connecting students, educators, and institutions with innovative digital tools."
+    // },
+    // {
+    //   category: "Security",
+    //   title: "CyberShield",
+    //   description: "Enterprise-grade cybersecurity solution protecting digital assets and networks from advanced threats and vulnerabilities."
+    // }
   ];
 
   return (
@@ -59,11 +59,11 @@ const OurProductsSection = () => {
 
       {/* Horizontal Slider Container */}
       <div className="overflow-x-auto -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 scrollbar-hide scroll-smooth">
-        <div className="flex gap-4 sm:gap-5 lg:gap-6 pb-4" style={{ minWidth: 'max-content' }}>
+        <div className="flex gap-6 sm:gap-8 lg:gap-12 pb-4" style={{ minWidth: 'max-content' }}>
           {products.map((product, index) => (
             <div 
               key={index} 
-              className="flex-shrink-0 w-[280px] sm:w-[360px] md:w-[400px] lg:w-[448px] flex flex-col"
+              className="flex-shrink-0 w-[440px] sm:w-[460px] lg:w-[448px] flex flex-col"
             >
               {/* Image Container with Category Badge */}
               <div className="relative mb-4 sm:mb-5">
@@ -72,11 +72,11 @@ const OurProductsSection = () => {
                   <img 
                     src={product.image} 
                     alt={product.title}
-                    className="w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[360px] object-cover"
+                    className="w-full h-[280px] sm:h-[320px] lg:h-[360px] rounded-lg object-cover"
                   />
                 ) : (
                   <div 
-                    className="w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[360px]"
+                    className="w-full h-[280px] sm:h-[320px] lg:h-[360px] rounded-lg"
                     style={{ backgroundColor: '#0A0A0A' }}
                   ></div>
                 )}

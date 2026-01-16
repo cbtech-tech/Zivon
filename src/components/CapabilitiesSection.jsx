@@ -2,7 +2,7 @@ import React from 'react';
 import { FiArrowRight } from "react-icons/fi";
 import DraftingCompassIcon from '../assets/drafting-compass.svg';
 import CloudIcon from '../assets/cloud.svg';
-import BrainCircuitIcon from '../assets/brain-circuit.png';
+import BrainCircuitIcon from '../assets/brain-circuit.svg';
 
 const CapabilitiesSection = () => {
   const capabilities = [
@@ -52,7 +52,11 @@ const CapabilitiesSection = () => {
                   style={{ backgroundColor: '#F1F5F9' }}
                 >
                   {capability.isSvgIcon ? (
-                    <img src={IconComponent} alt={capability.title} className="w-6 h-6" />
+                    <img 
+                      src={IconComponent} 
+                      alt={capability.title} 
+                      className={capability.title === "AI & Data" ? "w-10 h-10 object-contain" : "w-6 h-6 object-contain"} 
+                    />
                   ) : capability.isMaterialIcon ? (
                     <span className="material-symbols-outlined" style={{ color: '#000000', fontSize: '24px' }}>
                       {IconComponent}
