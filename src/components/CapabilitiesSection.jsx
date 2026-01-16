@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiArrowRight } from "react-icons/fi";
 import DraftingCompassIcon from '../assets/drafting-compass.svg';
 import CloudIcon from '../assets/cloud.svg';
@@ -11,21 +12,24 @@ const CapabilitiesSection = () => {
       title: "Engineering",
       description: "Full-cycle software development. We refactor legacy monoliths into scalable microservices, ensuring speed and reliability.",
       isMultiLine: true,
-      isSvgIcon: true
+      isSvgIcon: true,
+      link: "/engineering"
     },
     {
       icon: CloudIcon,
       title: "Cloud",
       description: "Native cloud infrastructure and DevOps automation. We build resilient environments that scale with your business demands.",
       isMultiLine: true,
-      isSvgIcon: true
+      isSvgIcon: true,
+      link: "/cloud"
     },
     {
       icon: BrainCircuitIcon,
       title: "AI & Data",
       description: "Predictive modeling and intelligent automation. Transforming raw data into actionable insights for strategic advantage.",
       isMultiLine: true,
-      isSvgIcon: true
+      isSvgIcon: true,
+      link: "/ai-and-data"
     }
   ];
 
@@ -107,13 +111,13 @@ const CapabilitiesSection = () => {
               )}
 
               {/* Learn More Link */}
-              <a 
-                href="#" 
+              <Link 
+                to={capability.link}
                 className="inline-flex items-center gap-2 text-sm sm:text-base text-primary hover:underline transition-all duration-200 mt-auto group"
               >
                 <span>Learn More</span>
                 <FiArrowRight className="w-4 h-4 transition-all duration-200 opacity-0 group-hover:opacity-100" style={{ transform: 'rotate(-45deg)' }} />
-              </a>
+              </Link>
             </div>
           );
         })}
