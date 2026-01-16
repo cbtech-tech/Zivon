@@ -89,7 +89,7 @@ const OurCompaniesSection = () => {
                 href="#" 
                 className="inline-flex items-center gap-2 text-sm sm:text-base text-primary hover:underline transition-all duration-200 mt-auto group"
               >
-                <span>Visit Site</span>
+                <span>Learn More</span>
                 <FiArrowRight className="w-4 h-4 transition-all duration-200 opacity-0 group-hover:opacity-100" style={{ transform: 'rotate(-45deg)' }} />
               </a>
             </div>
