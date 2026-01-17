@@ -139,7 +139,7 @@ const Footer = () => {
         <div className="pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
             {/* Copyright */}
-            <div style={{ fontSize: 'clamp(14px, 3.5vw, 20px)', fontWeight: 400, color: '#020617' }}>
+            <div className="text-sm sm:text-base" style={{ fontWeight: 400, color: '#020617' }}>
               © {currentYear} AxonCorp International. All Rights Reserved.
             </div>
 

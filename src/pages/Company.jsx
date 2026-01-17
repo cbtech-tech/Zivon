@@ -13,7 +13,7 @@ import EmailSendIcon from '../assets/Email Send.svg';
 
 const Company = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []);
 
   return (
@@ -373,7 +373,7 @@ const Company = () => {
               borderRadius: '16px',
               width: '100%',
               maxWidth: '1280px',
-              height: '605px',
+              height: 'clamp(400px, 50vh, 605px)',
               padding: '40px',
               gap: '10px'
             }}

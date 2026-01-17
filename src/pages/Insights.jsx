@@ -10,21 +10,21 @@ const Insights = () => {
   const [activeCategory, setActiveCategory] = useState('All Stories');
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []);
 
   return (
     <main className="w-full bg-white">
       {/* Editorial Banner Section */}
       <section className="w-full pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: '60px', paddingRight: '60px' }}>
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Hero Image */}
           <div 
             className="rounded-2xl overflow-hidden mb-6"
             style={{
               width: '100%',
               maxWidth: '1320px',
-              height: '596px',
+              height: 'clamp(300px, 50vh, 596px)',
               borderRadius: '16px'
             }}
           >
@@ -175,7 +175,7 @@ const Insights = () => {
 
       {/* Featured Insight Section */}
       <section className="w-full bg-white pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: '60px', paddingRight: '60px' }}>
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="flex flex-col">
@@ -262,8 +262,9 @@ const Insights = () => {
                 alt="Migrating Legacy System"
                 className="rounded-2xl"
                 style={{
-                  width: '640px',
-                  height: '456px',
+                  width: 'clamp(100%, 50vw, 640px)',
+                  height: 'clamp(250px, 35vh, 456px)',
+                  maxWidth: '100%',
                   filter: 'grayscale(100%)',
                   borderRadius: '16px',
                   objectFit: 'cover',
@@ -289,7 +290,7 @@ const Insights = () => {
 
       {/* Featured Insight Section 2 - AI & Ethics */}
       <section className="w-full bg-white pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: '60px', paddingRight: '60px' }}>
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="flex flex-col">
@@ -376,8 +377,9 @@ const Insights = () => {
                 alt="The Moral Landscape of Automation"
                 className="rounded-2xl"
                 style={{
-                  width: '640px',
-                  height: '456px',
+                  width: 'clamp(100%, 50vw, 640px)',
+                  height: 'clamp(250px, 35vh, 456px)',
+                  maxWidth: '100%',
                   filter: 'grayscale(100%)',
                   borderRadius: '16px',
                   objectFit: 'cover',
@@ -397,7 +399,7 @@ const Insights = () => {
           borderRight: '1px solid #F1F5F9'
         }}
       >
-        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: '60px', paddingRight: '60px' }}>
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12">
             {/* Left Content */}
             <div className="flex-1">
@@ -485,7 +487,7 @@ const Insights = () => {
 
       {/* Article List Section */}
       <section className="w-full bg-white pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20 xl:pb-24 relative">
-        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: '60px', paddingRight: '60px' }}>
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Article 1 */}
           <div className="relative pb-8 sm:pb-12" style={{ paddingBottom: '48px', marginBottom: '48px' }}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -535,7 +537,8 @@ const Insights = () => {
                 src={TheArchitectureImage} 
                 alt="The Architecture of Scale"
                 style={{
-                  width: '336px',
+                  width: 'clamp(280px, 30vw, 336px)',
+                  maxWidth: '100%',
                   height: '200px',
                   filter: 'grayscale(100%)',
                   borderRadius: '0px',
@@ -605,7 +608,8 @@ const Insights = () => {
                 src={VisulizingImage} 
                 alt="Visualizing Complex Systems"
                 style={{
-                  width: '336px',
+                  width: 'clamp(280px, 30vw, 336px)',
+                  maxWidth: '100%',
                   height: '200px',
                   filter: 'grayscale(100%)',
                   borderRadius: '0px',

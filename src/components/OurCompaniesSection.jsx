@@ -14,7 +14,13 @@ const OurCompaniesSection = () => {
     }
     // Prevent default for normal clicks and use React Router navigation
     e.preventDefault();
+    // Scroll to top immediately before navigation
+    window.scrollTo({ top: 0, behavior: 'instant' });
     navigate(href);
+    // Ensure scroll after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 0);
   };
   const companies = [
     {

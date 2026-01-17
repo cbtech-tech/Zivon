@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Products = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <main className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
       <div className="max-w-4xl">

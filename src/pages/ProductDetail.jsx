@@ -21,7 +21,7 @@ const ProductDetail = () => {
   const { productId } = useParams();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []);
 
   // Product data mapping
@@ -171,9 +171,9 @@ const ProductDetail = () => {
           <div 
             className="rounded-2xl overflow-hidden relative mx-auto"
             style={{
-              width: '1280px',
-              maxWidth: '100%',
-              height: '596px',
+              width: '100%',
+              maxWidth: '1280px',
+              height: 'clamp(300px, 50vh, 596px)',
               borderRadius: '16px'
             }}
           >
@@ -206,7 +206,7 @@ const ProductDetail = () => {
             className="mb-2 sm:mb-3 tracking-[-0.02em]"
             style={{ 
               color: '#000000',
-              fontSize: '72px',
+              fontSize: 'clamp(36px, 6vw, 72px)',
               fontWeight: 600
             }}
           >
@@ -242,7 +242,8 @@ const ProductDetail = () => {
                 key={index}
                 className="bg-white border flex flex-col"
                 style={{
-                  width: '296px',
+                  width: '100%',
+                  maxWidth: '296px',
                   height: '190px',
                   borderRadius: '16px',
                   borderWidth: '1px',
@@ -323,7 +324,7 @@ const ProductDetail = () => {
           style={{
             width: '1440px',
             maxWidth: '100%',
-            height: '400px',
+            height: 'clamp(300px, 40vh, 400px)',
             paddingTop: '32px',
             paddingRight: '80px',
             paddingBottom: '32px',
@@ -370,7 +371,8 @@ const ProductDetail = () => {
             <div 
               className="border flex items-center justify-center"
               style={{
-                width: '600px',
+                width: '100%',
+                maxWidth: '600px',
                 height: '320px',
                 borderRadius: '16px',
                 borderWidth: '1px',
@@ -524,7 +526,8 @@ const ProductDetail = () => {
                 key={index}
                 className="bg-white border flex flex-col"
                 style={{
-                  width: '400px',
+                  width: '100%',
+                  maxWidth: '400px',
                   height: '442px',
                   borderRadius: '16px',
                   borderWidth: '1px',

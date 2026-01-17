@@ -37,7 +37,10 @@ const LatestInsightsSection = () => {
           Latest Insights
         </h2>
         <Link 
-          to="/insights" 
+          to="/insights"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+          }}
           className="inline-block text-sm sm:text-base text-secondary hover:text-primary transition-all duration-200 font-medium"
         >
           View All Insights
