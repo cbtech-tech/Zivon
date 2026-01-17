@@ -11,8 +11,11 @@ import Icon2 from '../assets/ourProducts/2.svg';
 import Icon3 from '../assets/ourProducts/3.svg';
 import Icon4 from '../assets/ourProducts/4.svg';
 import PaychequeIcon from '../assets/ourProducts/Paycheque.svg';
-import Frame109Icon from '../assets/ourProducts/Frame 109.svg';
-import Frame82Icon from '../assets/ourProducts/Frame 82.svg';
+import StethoscopeIcon from '../assets/ourProducts/Stethoscope.svg';
+import OnlineShopIcon from '../assets/ourProducts/Online Shop.svg';
+import PhoneLaptopIcon from '../assets/ourProducts/ic-fluent-phone-laptop-24-filled 1.svg';
+import SmartThingIcon from '../assets/ourProducts/smartThing.png';
+import Icon20131 from '../assets/ourProducts/20131 (1) 1.svg';
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -164,7 +167,7 @@ const ProductDetail = () => {
     <main className="w-full bg-white">
       {/* Hero Image Section */}
       <section className="w-full pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-8 sm:pb-10 lg:pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div 
             className="rounded-2xl overflow-hidden relative mx-auto"
             style={{
@@ -197,7 +200,7 @@ const ProductDetail = () => {
 
       {/* Product Header Content */}
       <section className="w-full bg-white pb-8 sm:pb-10 lg:pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Product Name */}
           <h1 
             className="mb-2 sm:mb-3 tracking-[-0.02em]"
@@ -223,7 +226,7 @@ const ProductDetail = () => {
 
       {/* Key Capabilities Section */}
       <section className="w-full bg-white pt-4 sm:pt-6 lg:pt-8 pb-8 sm:pb-10 lg:pb-12 xl:pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Section Title */}
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-[-0.02em]"
@@ -283,15 +286,24 @@ const ProductDetail = () => {
       </section>
 
       {/* Technical Architecture Section */}
-      <section className="w-full bg-white pt-4 sm:pt-6 lg:pt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white pt-12 sm:pt-16 lg:pt-20">
+        <div 
+          className="mx-auto"
+          style={{
+            maxWidth: '1440px',
+            width: '100%',
+            paddingRight: 'clamp(16px, 4vw, 60px)',
+            paddingLeft: 'clamp(16px, 4vw, 60px)',
+            gap: '32px'
+          }}
+        >
           {/* Section Title */}
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-[-0.02em]"
             style={{ 
               color: '#000000', 
               fontWeight: 600,
-              marginBottom: '20px'
+              marginBottom: '48px'
             }}
           >
             Technical Architecture
@@ -309,7 +321,7 @@ const ProductDetail = () => {
         <div 
           className="mx-auto"
           style={{
-            width: '1441px',
+            width: '1440px',
             maxWidth: '100%',
             height: '400px',
             paddingTop: '32px',
@@ -381,16 +393,16 @@ const ProductDetail = () => {
                       backgroundColor: '#1E293B'
                     }}
                   >
-                    <span 
-                      className="material-symbols-outlined"
-                      style={{ 
-                        color: '#FFFFFF', 
-                        fontSize: '28px',
-                        fontWeight: 400
+                    <img 
+                      src={PhoneLaptopIcon} 
+                      alt="Client / Device"
+                      style={{
+                        width: '28px',
+                        height: '28px',
+                        objectFit: 'contain',
+                        filter: 'brightness(0) invert(1)'
                       }}
-                    >
-                      devices
-                    </span>
+                    />
                   </div>
                 </div>
 
@@ -416,16 +428,16 @@ const ProductDetail = () => {
                       backgroundColor: '#1E293B'
                     }}
                   >
-                    <span 
-                      className="material-symbols-outlined"
-                      style={{ 
-                        color: '#FFFFFF', 
-                        fontSize: '28px',
-                        fontWeight: 400
+                    <img 
+                      src={SmartThingIcon} 
+                      alt="Distributed Processing / Network"
+                      style={{
+                        width: '28px',
+                        height: '28px',
+                        objectFit: 'contain',
+                        filter: 'brightness(0) invert(1)'
                       }}
-                    >
-                      hub
-                    </span>
+                    />
                   </div>
                 </div>
 
@@ -451,16 +463,16 @@ const ProductDetail = () => {
                       backgroundColor: '#1E293B'
                     }}
                   >
-                    <span 
-                      className="material-symbols-outlined"
-                      style={{ 
-                        color: '#FFFFFF', 
-                        fontSize: '28px',
-                        fontWeight: 400
+                    <img 
+                      src={Icon20131} 
+                      alt="Database / Storage"
+                      style={{
+                        width: '28px',
+                        height: '28px',
+                        objectFit: 'contain',
+                        filter: 'brightness(0) invert(1)'
                       }}
-                    >
-                      database
-                    </span>
+                    />
                   </div>
                 </div>
               </div>
@@ -474,10 +486,10 @@ const ProductDetail = () => {
         <div 
           className="mx-auto"
           style={{
-            width: '1440px',
-            maxWidth: '100%',
-            paddingRight: '80px',
-            paddingLeft: '80px',
+            maxWidth: '1440px',
+            width: '100%',
+            paddingRight: 'clamp(16px, 4vw, 60px)',
+            paddingLeft: 'clamp(16px, 4vw, 60px)',
             gap: '32px'
           }}
         >
@@ -498,12 +510,12 @@ const ProductDetail = () => {
                 description: 'Real-time fraud detection analyzing millions of transactions per second to flag anomalies'
               },
               {
-                icon: Frame109Icon,
+                icon: StethoscopeIcon,
                 title: 'Healthcare',
                 description: 'High-throughput analytics for patient data, diagnostics, and operational systems—enabling faster insights while maintaining strict data privacy and compliance.'
               },
               {
-                icon: Frame82Icon,
+                icon: OnlineShopIcon,
                 title: 'Retail & E-commerce',
                 description: 'Real-time demand forecasting and behavioral analytics to optimize inventory, pricing, and personalized customer experiences at scale.'
               }
@@ -536,8 +548,8 @@ const ProductDetail = () => {
                       src={industry.icon} 
                       alt={industry.title}
                       style={{
-                        width: '20px',
-                        height: '20px',
+                        width: '24px',
+                        height: '24px',
                         objectFit: 'contain'
                       }}
                     />

@@ -62,7 +62,7 @@ const Engineering = () => {
     <main className="w-full">
       {/* Header Section */}
       <section className="w-full" style={{ backgroundColor: '#F8FAFC' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 xl:py-24">
+        <div className="mx-auto py-12 sm:py-16 lg:py-20 xl:py-24" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Small Uppercase Label */}
           <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm uppercase tracking-wider mb-4 sm:mb-6">
             <div 
@@ -97,7 +97,7 @@ const Engineering = () => {
 
       {/* Capabilities Cards Section */}
       <section className="w-full bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-10 xl:py-12 relative">
+        <div className="mx-auto py-6 sm:py-8 lg:py-10 xl:py-12 relative" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Full-height vertical dividers */}
           <div 
             className="hidden lg:block absolute top-0 bottom-0 border-r border-gray-100"

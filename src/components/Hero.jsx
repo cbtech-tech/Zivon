@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 xl:py-20">
+      <section className="mx-auto py-8 sm:py-12 lg:py-16 xl:py-20" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
         <div className="max-w-4xl mt-8 sm:mt-12 lg:mt-16">
           {/* Label */}
           <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm uppercase tracking-wider text-primary mb-4 sm:mb-6">

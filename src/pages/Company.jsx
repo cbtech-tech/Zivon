@@ -9,6 +9,7 @@ import RocketIcon from '../assets/Company/rocket.svg';
 import EyeIcon from '../assets/Company/Eye.svg';
 import SettingsIcon from '../assets/Company/Settings.svg';
 import CompassIcon from '../assets/Company/Compass.svg';
+import EmailSendIcon from '../assets/Email Send.svg';
 
 const Company = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const Company = () => {
 
         {/* Hero Content - Bottom Left */}
         <div className="relative h-full flex items-end">
-          <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16 xl:pb-20">
+          <div className="mx-auto w-full pb-8 sm:pb-12 lg:pb-16 xl:pb-20" style={{ maxWidth: '1440px', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
             <h1 
               className="font-bold leading-tight"
               style={{ color: '#FFFFFF', fontSize: '72px' }}
@@ -60,7 +61,7 @@ const Company = () => {
 
       {/* Content Area Section */}
       <section className="w-full bg-white pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16">
             {/* LEFT COLUMN - Our Philosophy */}
             <div className="flex flex-col mt-6 sm:mt-8 lg:mt-10">
@@ -178,7 +179,7 @@ const Company = () => {
 
       {/* Our Impact Section */}
       <section className="w-full pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24" style={{ backgroundColor: '#F8FAFC' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Section Title */}
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 lg:mb-8"
@@ -221,13 +222,13 @@ const Company = () => {
                 }}
               >
                 {/* Icon - Top Left */}
-                <div className="mb-3 sm:mb-4" style={{ width: '20px', height: '20px' }}>
+                <div className="mb-3 sm:mb-4" style={{ width: '24px', height: '24px' }}>
                   <img 
                     src={stat.icon} 
                     alt={stat.label}
                     style={{
-                      width: '20px',
-                      height: '20px',
+                      width: '24px',
+                      height: '24px',
                       objectFit: 'contain'
                     }}
                   />
@@ -264,7 +265,7 @@ const Company = () => {
 
       {/* Core Values Section */}
       <section className="w-full bg-white pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Section Title */}
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 lg:mb-8"
@@ -355,7 +356,7 @@ const Company = () => {
 
       {/* Global Presence Section */}
       <section className="w-full bg-white pt-4 sm:pt-6 lg:pt-8 xl:pt-10 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Section Heading */}
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 lg:mb-8"
@@ -399,9 +400,14 @@ const Company = () => {
                   San Francisco
                 </div>
               </div>
-              <FiChevronRight 
-                className="w-4 h-4"
-                style={{ color: '#000000' }}
+              <img 
+                src={EmailSendIcon}
+                alt="Email"
+                style={{
+                  width: '16px',
+                  height: '16px',
+                  objectFit: 'contain'
+                }}
               />
             </div>
           </div>

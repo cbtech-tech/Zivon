@@ -13,7 +13,7 @@ const Cloud = () => {
 
   return (
     <main className="w-full bg-white">
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 xl:py-24">
+      <section className="mx-auto py-12 sm:py-16 lg:py-20 xl:py-24" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
         {/* Eyebrow Label */}
         <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm uppercase tracking-wider mb-4 sm:mb-6">
           <div 
@@ -63,7 +63,7 @@ const Cloud = () => {
 
       {/* Services Grid Section */}
       <section className="w-full bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 sm:pt-2 lg:pt-4 xl:pt-6 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
+        <div className="mx-auto pt-0 sm:pt-2 lg:pt-4 xl:pt-6 pb-12 sm:pb-16 lg:pb-20 xl:pb-24" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             {[
               {
@@ -206,7 +206,7 @@ const Cloud = () => {
 
       {/* Core Benefits Section */}
       <section className="w-full py-12 sm:py-16 lg:py-20 xl:py-24" style={{ backgroundColor: '#020617' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Heading */}
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-12 sm:mb-16 lg:mb-20 tracking-[-0.02em]"
@@ -266,7 +266,7 @@ const Cloud = () => {
 
       {/* Strategic Advisory CTA Section */}
       <section className="w-full pt-4 sm:pt-6 lg:pt-8 xl:pt-10 pb-12 sm:pb-16 lg:pb-20 xl:pb-24" style={{ backgroundColor: '#020617' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div 
             className="max-w-6xl mx-auto rounded-lg p-8 sm:p-10 lg:p-12"
             style={{ backgroundColor: '#F8FAFC' }}

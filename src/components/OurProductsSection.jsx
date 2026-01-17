@@ -62,7 +62,7 @@ const OurProductsSection = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 xl:py-16 bg-white">
+    <section className="mx-auto py-6 sm:py-8 lg:py-12 xl:py-16 bg-white" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
       {/* Section Title with Subheading */}
       <div className="mb-8 sm:mb-12 lg:mb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary mb-3 sm:mb-4 tracking-[-0.02em]">

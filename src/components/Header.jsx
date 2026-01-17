@@ -169,7 +169,7 @@ const Header = () => {
           }`}
         >
           <div className="w-full">
-            <div className="max-w-7xl ml-4 sm:ml-6 lg:ml-8 mr-4 sm:mr-6 lg:mr-8 px-4 sm:px-6 lg:px-8 py-6">
+            <div className="mx-auto py-6" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
             <div className="text-base text-secondary">
               Menu content placeholder
             </div>

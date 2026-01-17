@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto py-12 sm:py-16 lg:py-20" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row md:justify-between gap-8 sm:gap-12 lg:gap-16 mb-8 sm:mb-12 lg:mb-16">
           {/* Left Column - Logo & Tagline */}

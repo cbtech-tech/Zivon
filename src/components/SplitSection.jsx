@@ -5,7 +5,7 @@ import GlobeIcon from '../assets/globe.svg';
 const SplitSection = () => {
   return (
     <>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 xl:py-20">
+      <section className="mx-auto py-8 sm:py-12 lg:py-16 xl:py-20" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 relative">
           {/* Vertical Divider - Only visible on large screens */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-100 transform -translate-x-1/2"></div>

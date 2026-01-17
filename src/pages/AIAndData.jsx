@@ -10,7 +10,7 @@ const AIAndData = () => {
 
   return (
     <main className="w-full bg-white">
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 xl:py-24 relative">
+      <section className="mx-auto py-12 sm:py-16 lg:py-20 xl:py-24 relative" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
         {/* Top Header Area */}
         <div className="mb-12 sm:mb-16 lg:mb-20">
           {/* Eyebrow Label */}
@@ -208,7 +208,7 @@ const AIAndData = () => {
 
       {/* Success Metrics Section */}
       <section className="w-full bg-white pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Section Heading */}
           <h2 
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-12 sm:mb-16 lg:mb-20 tracking-[-0.02em]"
@@ -218,7 +218,7 @@ const AIAndData = () => {
           </h2>
 
           {/* Metrics Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
             {[
               {
                 value: "99.9%",
@@ -264,7 +264,7 @@ const AIAndData = () => {
 
       {/* Dark CTA Section */}
       <section className="w-full py-12 sm:py-16 lg:py-20 xl:py-24" style={{ backgroundColor: '#020617' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Headline */}
           <h2 
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 sm:mb-10 lg:mb-12 tracking-[-0.02em]"
