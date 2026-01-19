@@ -20,10 +20,16 @@ const Company = () => {
     <main className="w-full bg-white">
       {/* Hero Banner Section */}
       <section 
-        className="relative w-full"
+        className="relative mx-auto"
         style={{ 
-          height: '70vh',
-          minHeight: '500px'
+          width: '1440px',
+          height: '596px',
+          paddingTop: '49px',
+          paddingRight: '60px',
+          paddingBottom: '49px',
+          paddingLeft: '60px',
+          gap: '10px',
+          maxWidth: '100%'
         }}
       >
         {/* Background Image */}
@@ -47,10 +53,10 @@ const Company = () => {
 
         {/* Hero Content - Bottom Left */}
         <div className="relative h-full flex items-end">
-          <div className="mx-auto w-full pb-8 sm:pb-12 lg:pb-16 xl:pb-20" style={{ maxWidth: '1440px', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
+          <div className="w-full">
             <h1 
               className="font-bold leading-tight"
-              style={{ color: '#FFFFFF', fontSize: '72px' }}
+              style={{ color: '#FFFFFF', fontSize: '72px', fontWeight: 700 }}
             >
               Building the Future of <br />
               Software
@@ -87,7 +93,11 @@ const Company = () => {
                 className="text-base sm:text-lg lg:text-xl leading-relaxed"
                 style={{ color: '#64748B', fontWeight: 400 }}
               >
-                We believe in technology that empowers humanity. Our mission is to create tools that are intuitive, powerful, and accessible to everyone, everywhere. We don't just write code; we craft experiences that bridge the gap between complex problems and simple solutions.
+                We believe in technology that empowers humanity. Our<br />
+                mission is to create tools that are intuitive, powerful, and<br />
+                accessible to everyone, everywhere. We don't just write<br />
+                code; we craft experiences that bridge the gap between<br />
+                complex problems and simple solutions.
               </p>
             </div>
 
@@ -108,8 +118,8 @@ const Company = () => {
                   {/* Timeline Item 1 */}
                   <div>
                     <div 
-                      className="text-xs sm:text-sm mb-2"
-                      style={{ color: '#64748B', fontWeight: 400 }}
+                      className="mb-2"
+                      style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
                     >
                       2010
                     </div>
@@ -130,8 +140,8 @@ const Company = () => {
                   {/* Timeline Item 3 */}
                   <div>
                     <div 
-                      className="text-xs sm:text-sm mb-2"
-                      style={{ color: '#64748B', fontWeight: 400 }}
+                      className="mb-2"
+                      style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
                     >
                       2023
                     </div>
@@ -153,8 +163,8 @@ const Company = () => {
                 {/* Timeline Item 2 - Right Column */}
                 <div>
                   <div 
-                    className="text-xs sm:text-sm mb-2"
-                    style={{ color: '#64748B', fontWeight: 400 }}
+                    className="mb-2"
+                    style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
                   >
                     2015
                   </div>
@@ -189,7 +199,7 @@ const Company = () => {
           </h2>
 
           {/* Stats Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '24px' }}>
             {[
               {
                 icon: PeopleIcon,
@@ -214,11 +224,15 @@ const Company = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-4 sm:p-5 border border-gray-200 relative"
+                className="bg-white border relative"
                 style={{
-                  borderRadius: '12px',
+                  width: '296px',
+                  height: '192px',
+                  padding: '32px',
+                  borderRadius: '16px',
+                  borderWidth: '1px',
                   borderColor: '#E2E8F0',
-                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)'
+                  maxWidth: '100%'
                 }}
               >
                 {/* Icon - Top Left */}
@@ -239,7 +253,7 @@ const Company = () => {
                   className="mb-2 sm:mb-3"
                   style={{ 
                     color: '#000000',
-                    fontSize: '24px',
+                    fontSize: '30px',
                     fontWeight: 600
                   }}
                 >
@@ -250,8 +264,8 @@ const Company = () => {
                 <div 
                   className="uppercase tracking-wider"
                   style={{ 
-                    color: '#64748B', 
-                    fontSize: '16px',
+                    color: '#475569', 
+                    fontSize: '20px',
                     fontWeight: 500
                   }}
                 >
@@ -300,11 +314,14 @@ const Company = () => {
             ].map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 relative"
+                className="bg-white rounded-2xl border border-gray-200 relative"
                 style={{
+                  width: '296px',
+                  height: '365px',
                   borderRadius: '16px',
                   borderColor: '#E2E8F0',
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  maxWidth: '100%'
                 }}
               >
                 {/* Decorative Circle - Top Right */}
@@ -320,8 +337,10 @@ const Company = () => {
                   }}
                 ></div>
 
+                {/* Content Container */}
+                <div className="relative z-10" style={{ paddingTop: '32px', paddingLeft: '32px', paddingRight: '32px', paddingBottom: '32px' }}>
                 {/* Icon - Top Left */}
-                <div className="mb-4 sm:mb-6 relative z-10" style={{ width: '24px', height: '24px' }}>
+                <div className="mb-4 sm:mb-6" style={{ width: '24px', height: '24px' }}>
                   <img 
                     src={value.icon} 
                     alt={value.title}
@@ -335,19 +354,20 @@ const Company = () => {
 
                 {/* Title */}
                 <h3 
-                  className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 relative z-10"
-                  style={{ color: '#000000' }}
+                  className="font-bold mb-3 sm:mb-4 relative z-10"
+                  style={{ color: '#000000', fontSize: '24px', marginTop: '90px', letterSpacing: '0%' }}
                 >
                   {value.title}
                 </h3>
 
                 {/* Description */}
                 <p 
-                  className="text-sm sm:text-base leading-relaxed relative z-10"
-                  style={{ color: '#64748B', fontWeight: 400 }}
+                  className="leading-relaxed"
+                  style={{ color: '#64748B', fontWeight: 400, fontSize: '20px', lineHeight: '25px' }}
                 >
                   {value.description}
                 </p>
+                </div>
               </div>
             ))}
           </div>
@@ -380,10 +400,16 @@ const Company = () => {
           >
             {/* Headquarters Badge - Bottom Left */}
             <div 
-              className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 bg-white rounded-xl border flex items-center gap-3 px-4 py-3"
+              className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 bg-white border flex items-center justify-between"
               style={{
+                width: '353px',
+                height: '96px',
+                gap: '41px',
+                padding: '24px',
                 borderRadius: '12px',
-                borderColor: '#E2E8F0'
+                borderWidth: '1px',
+                borderColor: '#E2E8F0',
+                maxWidth: '100%'
               }}
             >
               <div className="flex flex-col">
@@ -406,7 +432,8 @@ const Company = () => {
                 style={{
                   width: '16px',
                   height: '16px',
-                  objectFit: 'contain'
+                  objectFit: 'contain',
+                  flexShrink: 0
                 }}
               />
             </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FiArrowRight } from "react-icons/fi";
-import CloudBanner from '../assets/CloudBanner.png';
+import CloudBanner from '../assets/cloud/CloudBanner.svg';
 import CloudDevelopment from '../assets/cloud/Cloud Development.svg';
 import GitHub from '../assets/cloud/GitHub.svg';
 import Icon3 from '../assets/cloud/3.svg';
@@ -23,7 +23,7 @@ const Cloud = () => {
               height: '0'
             }}
           ></div>
-          <span style={{ color: '#000000', fontWeight: 400 }}>ENTERPRISE INFRASTRUCTURE</span>
+          <span style={{ color: '#000000', fontWeight: 500, letterSpacing: '0%' }}>ENTERPRISE INFRASTRUCTURE</span>
         </div>
 
         {/* Main Heading */}
@@ -46,17 +46,35 @@ const Cloud = () => {
         </p>
 
         {/* Image */}
-        <div 
-          className="w-full rounded-lg overflow-hidden"
-          style={{ 
-            height: 'clamp(250px, 40vh, 400px)',
-            borderRadius: '16px'
+        <div
+          style={{
+            width: '1282px',
+            height: '552px',
+            gap: '10px',
+            borderRadius: '16px',
+            paddingTop: '72px',
+            paddingBottom: '72px',
+            backgroundColor: '#FAFAFA',
+            maxWidth: '100%',
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
           }}
         >
           <img 
             src={CloudBanner} 
             alt="Cloud Infrastructure" 
-            className="w-full h-full object-cover"
+            className="rounded-lg"
+            style={{
+              width: '1282px',
+              height: '408px',
+              gap: '61px',
+              objectFit: 'contain',
+              display: 'block',
+              borderRadius: '16px',
+              maxWidth: '100%'
+            }}
           />
         </div>
       </section>
@@ -125,7 +143,7 @@ const Cloud = () => {
                 {/* Title */}
                 <h2
                   className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-[-0.02em]"
-                  style={{ color: '#000000' }}
+                  style={{ color: '#000000', fontWeight: "600", fontSize: '30px'}}
                 >
                   {service.title === "Cloud Transformation" && (
                     <>
@@ -169,9 +187,9 @@ const Cloud = () => {
                     borderWidth: '1px',
                     borderRadius: '16px',
                     backgroundColor: 'transparent',
-                    width: '347px',
+                    width: '100%',
+                    maxWidth: '347px',
                     minHeight: '112px',
-                    maxWidth: '100%',
                     padding: '24px'
                   }}
                 >
@@ -191,7 +209,7 @@ const Cloud = () => {
                       {/* Feature Text */}
                       <span 
                         className="text-sm sm:text-base md:text-lg font-medium"
-                        style={{ color: '#64748B', fontWeight: 500 }}
+                        style={{ color: '#64748B', fontWeight: 500, fontSize: '20px' }}
                       >
                         {feature}
                       </span>
@@ -205,7 +223,7 @@ const Cloud = () => {
       </section>
 
       {/* Core Benefits Section */}
-      <section className="w-full py-12 sm:py-16 lg:py-20 xl:py-24" style={{ backgroundColor: '#020617' }}>
+      <section className="w-full pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24" style={{ backgroundColor: '#020617' }}>
         <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Heading */}
           <h2 
@@ -221,23 +239,44 @@ const Cloud = () => {
               {
                 index: "01",
                 title: "Scalability",
-                description: "Elastic infrastructure that expands dynamically with demand without manual intervention or performance degradation."
+                description: (
+                  <>
+                    Elastic infrastructure that expands<br />
+                    dynamically with demand without<br />
+                    manual intervention or performance<br />
+                    degradation.
+                  </>
+                )
               },
               {
                 index: "02",
                 title: "Resilience",
-                description: "Built-in fault tolerance and automated disaster recovery protocols ensuring maximum uptime for mission-critical applications."
+                description: (
+                  <>
+                    Built-in fault tolerance and automated<br />
+                    disaster recovery protocols ensuring<br />
+                    maximum uptime for mission-critical<br />
+                    application.
+                  </>
+                )
               },
               {
                 index: "03",
                 title: "Security Compliance",
-                description: "Continuous audit-readiness through automated governance that maps technical controls to global regulatory standards."
+                description: (
+                  <>
+                    Continuous audit-readiness through<br />
+                    automated governance that maps<br />
+                    technical controls to global regulatory<br />
+                    standard.
+                  </>
+                )
               }
             ].map((benefit, index) => (
-              <div key={index} className="flex flex-col">
+              <div key={index} className="flex flex-col" style={{ paddingLeft: 'clamp(0px, 2vw, 40px)' }}>
                 {/* Index Number */}
                 <div 
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 italic"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 sm:mb-3 italic"
                   style={{ color: '#475569', fontWeight: 600 }}
                 >
                   {benefit.index}
@@ -245,7 +284,7 @@ const Cloud = () => {
 
                 {/* Title */}
                 <h3 
-                  className="text-xl sm:text-2xl lg:text-3xl mb-4 sm:mb-6 tracking-[-0.02em]"
+                  className="text-xl sm:text-2xl lg:text-3xl mb-2 sm:mb-3 tracking-[-0.02em]"
                   style={{ color: '#FFFFFF', fontWeight: 600 }}
                 >
                   {benefit.title}
@@ -254,7 +293,7 @@ const Cloud = () => {
                 {/* Description */}
                 <p 
                   className="text-base sm:text-lg leading-relaxed"
-                  style={{ color: '#94A3B8', fontWeight: 400 }}
+                  style={{ color: '#94A3B8', fontWeight: 400, fontSize: '20px', lineHeight: '28px' }}
                 >
                   {benefit.description}
                 </p>
@@ -265,10 +304,10 @@ const Cloud = () => {
       </section>
 
       {/* Strategic Advisory CTA Section */}
-      <section className="w-full pt-4 sm:pt-6 lg:pt-8 xl:pt-10 pb-12 sm:pb-16 lg:pb-20 xl:pb-24" style={{ backgroundColor: '#020617' }}>
+      <section className="w-full pt-0 sm:pt-2 lg:pt-4 xl:pt-6 pb-12 sm:pb-16 lg:pb-20 xl:pb-24" style={{ backgroundColor: '#020617' }}>
         <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div 
-            className="max-w-6xl mx-auto rounded-lg p-8 sm:p-10 lg:p-12"
+            className="w-full rounded-lg p-8 sm:p-10 lg:p-12"
             style={{ backgroundColor: '#F8FAFC' }}
           >
             {/* Title */}

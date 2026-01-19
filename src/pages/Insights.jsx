@@ -16,16 +16,16 @@ const Insights = () => {
   return (
     <main className="w-full bg-white">
       {/* Editorial Banner Section */}
-      <section className="w-full pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
+      <section className="w-full pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
         <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Hero Image */}
           <div 
             className="rounded-2xl overflow-hidden mb-6"
             style={{
-              width: '100%',
-              maxWidth: '1320px',
-              height: 'clamp(300px, 50vh, 596px)',
-              borderRadius: '16px'
+              width: '1320px',
+              height: '596px',
+              borderRadius: '16px',
+              maxWidth: '100%'
             }}
           >
             <img 
@@ -47,8 +47,8 @@ const Insights = () => {
             <div 
               className="rounded-full"
               style={{
-                width: '6px',
-                height: '6px',
+                width: '12px',
+                height: '12px',
                 backgroundColor: '#000000'
               }}
             ></div>
@@ -138,7 +138,7 @@ const Insights = () => {
                   style={{
                     color: '#000000',
                     fontWeight: 600,
-                    fontSize: '30px',
+                    fontSize: (category === 'All Stories' || category === 'Engineering') ? '25px' : '28px',
                     fontFamily: 'inherit'
                   }}
                 >
@@ -183,7 +183,7 @@ const Insights = () => {
               <div 
                 className="text-xs sm:text-sm uppercase tracking-widest mb-3"
                 style={{ 
-                  color: '#64748B',
+                  color: '#000000',
                   fontWeight: 500,
                   letterSpacing: '0.1em',
                   marginBottom: '12px'
@@ -197,7 +197,7 @@ const Insights = () => {
                 className="font-bold tracking-[-0.02em] mb-4"
                 style={{ 
                   color: '#000000',
-                  fontSize: '48px',
+                  fontSize: 'clamp(32px, 5vw, 48px)',
                   fontWeight: 600,
                   lineHeight: '1.1',
                   maxWidth: '90%'
@@ -221,26 +221,27 @@ const Insights = () => {
               </p>
 
               {/* Author & Meta Row */}
-              <div className="flex items-center gap-2 mt-6" style={{ marginTop: '24px' }}>
-                {/* Circular Avatar */}
-                <div 
-                  className="rounded-full flex-shrink-0"
-                  style={{
-                    width: '40px',
-                    height: '40px',
-                    backgroundColor: '#1E293B'
-                  }}
-                ></div>
-                {/* Author Name */}
-                <div 
-                  className="text-sm sm:text-base font-medium"
-                  style={{ 
-                    color: '#000000',
-                    fontWeight: 500,
-                    marginRight: '8px'
-                  }}
-                >
-                  Sarah Chen
+              <div className="flex items-center justify-between mt-6" style={{ marginTop: '24px', gap: '16px' }}>
+                <div className="flex items-center gap-2">
+                  {/* Circular Avatar */}
+                  <div 
+                    className="rounded-full flex-shrink-0"
+                    style={{
+                      width: '40px',
+                      height: '40px',
+                      backgroundColor: '#1E293B'
+                    }}
+                  ></div>
+                  {/* Author Name */}
+                  <div 
+                    className="text-sm sm:text-base font-medium"
+                    style={{ 
+                      color: '#000000',
+                      fontWeight: 500
+                    }}
+                  >
+                    Sarah Chen
+                  </div>
                 </div>
                 {/* Read Time */}
                 <div 
@@ -262,13 +263,12 @@ const Insights = () => {
                 alt="Migrating Legacy System"
                 className="rounded-2xl"
                 style={{
-                  width: 'clamp(100%, 50vw, 640px)',
-                  height: 'clamp(250px, 35vh, 456px)',
+                  width: '640px',
+                  height: '456px',
                   maxWidth: '100%',
                   filter: 'grayscale(100%)',
                   borderRadius: '16px',
-                  objectFit: 'cover',
-                  maxWidth: '100%'
+                  objectFit: 'cover'
                 }}
               />
             </div>
@@ -298,7 +298,7 @@ const Insights = () => {
               <div 
                 className="text-xs sm:text-sm uppercase tracking-widest mb-3"
                 style={{ 
-                  color: '#64748B',
+                  color: '#000000',
                   fontWeight: 500,
                   letterSpacing: '0.1em',
                   marginBottom: '12px'
@@ -312,7 +312,7 @@ const Insights = () => {
                 className="font-bold tracking-[-0.02em] mb-4"
                 style={{ 
                   color: '#000000',
-                  fontSize: '48px',
+                  fontSize: 'clamp(32px, 5vw, 48px)',
                   fontWeight: 600,
                   lineHeight: '1.1',
                   maxWidth: '90%'
@@ -336,26 +336,27 @@ const Insights = () => {
               </p>
 
               {/* Author & Meta Row */}
-              <div className="flex items-center gap-2 mt-6" style={{ marginTop: '24px' }}>
-                {/* Circular Avatar */}
-                <div 
-                  className="rounded-full flex-shrink-0"
-                  style={{
-                    width: '40px',
-                    height: '40px',
-                    backgroundColor: '#1E293B'
-                  }}
-                ></div>
-                {/* Author Name */}
-                <div 
-                  className="text-sm sm:text-base font-medium"
-                  style={{ 
-                    color: '#000000',
-                    fontWeight: 500,
-                    marginRight: '8px'
-                  }}
-                >
-                  James Miller
+              <div className="flex items-center justify-between mt-6" style={{ marginTop: '24px', gap: '16px' }}>
+                <div className="flex items-center gap-2">
+                  {/* Circular Avatar */}
+                  <div 
+                    className="rounded-full flex-shrink-0"
+                    style={{
+                      width: '40px',
+                      height: '40px',
+                      backgroundColor: '#1E293B'
+                    }}
+                  ></div>
+                  {/* Author Name */}
+                  <div 
+                    className="text-sm sm:text-base font-medium"
+                    style={{ 
+                      color: '#000000',
+                      fontWeight: 500
+                    }}
+                  >
+                    James Miller
+                  </div>
                 </div>
                 {/* Read Time */}
                 <div 
@@ -377,13 +378,12 @@ const Insights = () => {
                 alt="The Moral Landscape of Automation"
                 className="rounded-2xl"
                 style={{
-                  width: 'clamp(100%, 50vw, 640px)',
-                  height: 'clamp(250px, 35vh, 456px)',
+                  width: '640px',
+                  height: '456px',
                   maxWidth: '100%',
                   filter: 'grayscale(100%)',
                   borderRadius: '16px',
-                  objectFit: 'cover',
-                  maxWidth: '100%'
+                  objectFit: 'cover'
                 }}
               />
             </div>
@@ -406,11 +406,11 @@ const Insights = () => {
               {/* Envelope Icon */}
               <div className="mb-4">
                 <div 
-                  className="rounded-full border-2 flex items-center justify-center"
+                  className="rounded-full flex items-center justify-center"
                   style={{
                     width: '48px',
                     height: '48px',
-                    borderColor: '#FFFFFF',
+                    border: '1px solid #64748B',
                     color: '#FFFFFF'
                   }}
                 >
@@ -448,7 +448,7 @@ const Insights = () => {
                   marginBottom: '24px'
                 }}
               >
-                Join 40,000+ software leaders receiving our curated breakdown of tech trends.
+                Join 40,000+ software leaders receiving our <br></br>curated breakdown of tech trends.
               </p>
 
               {/* Email Input and Subscribe Button */}
@@ -456,10 +456,10 @@ const Insights = () => {
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="px-4 py-3 rounded-lg border"
+                  className="px-4 py-3 rounded-lg"
                   style={{
                     backgroundColor: '#1E293B',
-                    borderColor: '#334155',
+                    border: '1px solid #94A3B8',
                     color: '#FFFFFF',
                     borderRadius: '8px',
                     fontSize: '16px',
@@ -497,7 +497,7 @@ const Insights = () => {
                 <div 
                   className="text-xs sm:text-sm uppercase tracking-widest mb-3"
                   style={{ 
-                    color: '#64748B',
+                    color: '#000000',
                     fontWeight: 500,
                     letterSpacing: '0.1em',
                     marginBottom: '12px'
@@ -511,7 +511,7 @@ const Insights = () => {
                   className="font-bold tracking-[-0.02em] mb-3"
                   style={{ 
                     color: '#000000',
-                    fontSize: '48px',
+                    fontSize: 'clamp(32px, 5vw, 48px)',
                     fontWeight: 600,
                     lineHeight: '1.1'
                   }}
@@ -568,7 +568,7 @@ const Insights = () => {
               <div 
                 className="text-xs sm:text-sm uppercase tracking-widest mb-3"
                 style={{ 
-                  color: '#64748B',
+                  color: '#000000',
                   fontWeight: 500,
                   letterSpacing: '0.1em',
                   marginBottom: '12px'
@@ -582,7 +582,7 @@ const Insights = () => {
                 className="font-bold tracking-[-0.02em] mb-3"
                 style={{ 
                   color: '#000000',
-                  fontSize: '48px',
+                  fontSize: 'clamp(32px, 5vw, 48px)',
                   fontWeight: 600,
                   lineHeight: '1.1'
                 }}

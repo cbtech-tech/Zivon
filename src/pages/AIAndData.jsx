@@ -28,7 +28,7 @@ const AIAndData = () => {
           {/* Main Heading */}
           <div className="mb-6 sm:mb-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[-0.02em] leading-tight mb-2">
-              <span style={{ color: '#64748B', fontWeight: 600 }}>AI & Data</span>
+              <span style={{ color: '#94A3B8', fontWeight: 600 }}>AI & Data</span>
             </h1>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[-0.02em] leading-tight" style={{ color: '#000000', fontWeight: 700 }}>
               Intelligence
@@ -68,8 +68,8 @@ const AIAndData = () => {
                 src={MachineLearningIcon}
                 alt="Machine Learning"
                 style={{ 
-                  width: 'clamp(24px, 3vw, 32px)',
-                  height: 'clamp(24px, 3vw, 32px)'
+                  width: '24px',
+                  height: '24px'
                 }}
               />
             </div>
@@ -92,15 +92,16 @@ const AIAndData = () => {
 
             {/* Feature List Box */}
             <div 
-              className="border p-4 sm:p-5 lg:p-6"
+              className="border"
               style={{ 
-                borderColor: '#E2E8F0',
-                borderWidth: '1px',
+                width: '374px',
+                height: '148px',
+                padding: '24px',
                 borderRadius: '16px',
+                borderWidth: '1px',
+                borderColor: '#E2E8F0',
                 backgroundColor: 'transparent',
-                width: '100%',
-                maxWidth: '347px',
-                minHeight: 'clamp(100px, 20vh, 112px)'
+                maxWidth: '100%'
               }}
             >
               {[
@@ -111,19 +112,19 @@ const AIAndData = () => {
                 <div
                   key={idx}
                   className="flex items-center gap-2 sm:gap-3"
-                  style={{ marginBottom: idx === 2 ? '0' : '4px' }}
+                  style={{ marginBottom: idx === 2 ? '0' : '4px', whiteSpace: 'nowrap' }}
                 >
                   {/* Number */}
                   <span 
                     className="text-xs sm:text-sm md:text-base lg:text-lg font-medium"
-                    style={{ color: '#64748B', fontWeight: 500 }}
+                    style={{ color: '#64748B', fontWeight: 500, fontSize: '20px', lineHeight: '28px' }}
                   >
                     {idx + 1}.
                   </span>
                   {/* Feature Text */}
                   <span 
                     className="text-xs sm:text-sm md:text-base lg:text-lg font-medium"
-                    style={{ color: '#64748B', fontWeight: 500 }}
+                    style={{ color: '#64748B', fontWeight: 500, fontSize: '20px', lineHeight: '28px' }}
                   >
                     {feature}
                   </span>
@@ -140,8 +141,8 @@ const AIAndData = () => {
                 src={BigDataIcon}
                 alt="Big Data Analytics"
                 style={{ 
-                  width: 'clamp(24px, 3vw, 32px)',
-                  height: 'clamp(24px, 3vw, 32px)'
+                  width: '24px',
+                  height: '24px'
                 }}
               />
             </div>
@@ -164,15 +165,16 @@ const AIAndData = () => {
 
             {/* Feature List Box */}
             <div 
-              className="border p-4 sm:p-5 lg:p-6"
+              className="border"
               style={{ 
-                borderColor: '#E2E8F0',
-                borderWidth: '1px',
+                width: '374px',
+                height: '148px',
+                padding: '24px',
                 borderRadius: '16px',
+                borderWidth: '1px',
+                borderColor: '#E2E8F0',
                 backgroundColor: 'transparent',
-                width: '100%',
-                maxWidth: '347px',
-                minHeight: 'clamp(100px, 20vh, 112px)'
+                maxWidth: '100%'
               }}
             >
               {[
@@ -183,19 +185,19 @@ const AIAndData = () => {
                 <div
                   key={idx}
                   className="flex items-center gap-2 sm:gap-3"
-                  style={{ marginBottom: idx === 2 ? '0' : '4px' }}
+                  style={{ marginBottom: idx === 2 ? '0' : '4px', whiteSpace: 'nowrap' }}
                 >
                   {/* Number */}
                   <span 
                     className="text-xs sm:text-sm md:text-base lg:text-lg font-medium"
-                    style={{ color: '#64748B', fontWeight: 500 }}
+                    style={{ color: '#64748B', fontWeight: 500, fontSize: '20px', lineHeight: '28px' }}
                   >
                     {idx + 1}.
                   </span>
                   {/* Feature Text */}
                   <span 
                     className="text-xs sm:text-sm md:text-base lg:text-lg font-medium"
-                    style={{ color: '#64748B', fontWeight: 500 }}
+                    style={{ color: '#64748B', fontWeight: 500, fontSize: '20px', lineHeight: '28px' }}
                   >
                     {feature}
                   </span>
@@ -218,7 +220,7 @@ const AIAndData = () => {
           </h2>
 
           {/* Metrics Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
+          <div className="flex flex-col md:flex-row" style={{ gap: 0, margin: 0, padding: 0, width: '100%' }}>
             {[
               {
                 value: "99.9%",
@@ -236,11 +238,26 @@ const AIAndData = () => {
                 value: "35%",
                 label: "Ops Cost Reduction"
               }
-            ].map((metric, index) => (
+            ].map((metric, index) => {
+              const isFirst = index === 0;
+              const isLast = index === 3;
+              
+              return (
               <div
                 key={index}
-                className="rounded-lg border p-4 sm:p-5 bg-white"
-                style={{ borderColor: '#E2E8F0' }}
+                className="bg-white"
+                style={{ 
+                  flex: (isFirst || isLast) ? '0.75' : '1',
+                  height: '144px',
+                  padding: '32px',
+                  borderRadius: '16px',
+                  borderTop: '1px solid #E2E8F0',
+                  borderBottom: '1px solid #E2E8F0',
+                  borderLeft: isFirst ? '1px solid #E2E8F0' : 'none',
+                  borderRight: '1px solid #E2E8F0',
+                  margin: 0,
+                  width: '100%'
+                }}
               >
                 {/* Metric Value */}
                 <div 
@@ -257,7 +274,8 @@ const AIAndData = () => {
                   {metric.label}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -276,10 +294,12 @@ const AIAndData = () => {
 
           {/* CTA Button */}
           <button
-            className="w-full py-4 sm:py-5 px-6 sm:px-8 font-medium text-sm sm:text-base md:text-lg rounded-lg transition-all duration-200 flex items-center justify-center gap-3 group"
+            className="w-full py-4 sm:py-5 px-6 sm:px-8 font-medium text-sm sm:text-base md:text-lg transition-all duration-200 flex items-center justify-center gap-3 group"
             style={{ 
               backgroundColor: '#FFFFFF',
-              color: '#000000'
+              color: '#000000',
+              borderRadius: '0',
+              border: 'none'
             }}
           >
             <span className="group-hover:underline">Consult with an Expert</span>

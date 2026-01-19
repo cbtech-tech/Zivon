@@ -16,6 +16,7 @@ import OnlineShopIcon from '../assets/ourProducts/Online Shop.svg';
 import PhoneLaptopIcon from '../assets/ourProducts/ic-fluent-phone-laptop-24-filled 1.svg';
 import SmartThingIcon from '../assets/ourProducts/smartThing.png';
 import Icon20131 from '../assets/ourProducts/20131 (1) 1.svg';
+import SystemDesignIcon from '../assets/ourProducts/product_stsytemDesign.svg';
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -166,34 +167,29 @@ const ProductDetail = () => {
   return (
     <main className="w-full bg-white">
       {/* Hero Image Section */}
-      <section className="w-full pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-8 sm:pb-10 lg:pb-12">
+      <section className="w-full pb-8 sm:pb-10 lg:pb-12">
         <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div 
-            className="rounded-2xl overflow-hidden relative mx-auto"
+            className="relative"
             style={{
-              width: '100%',
-              maxWidth: '1280px',
-              height: 'clamp(300px, 50vh, 596px)',
-              borderRadius: '16px'
+              width: '1280px',
+              height: '596px',
+              borderRadius: '16px',
+              backgroundImage: `url(${ProductBanner})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'grayscale(100%)',
+              maxWidth: '100%'
             }}
           >
-            <img 
-              src={ProductBanner} 
-              alt={product.name}
-              className="w-full h-full object-cover"
-              style={{
-                filter: 'grayscale(100%)',
-                width: '100%',
-                height: '100%'
-              }}
-            />
-            {/* Gradient Overlay */}
+            {/* Greyish Overlay */}
             <div 
               className="absolute inset-0"
               style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.2)' // 20% opacity
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                borderRadius: '16px'
               }}
-            ></div>
+            />
           </div>
         </div>
       </section>
@@ -218,8 +214,8 @@ const ProductDetail = () => {
             className="text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl"
             style={{ color: '#64748B', fontWeight: 400 }}
           >
-            Real-time data processing for enterprise scale. <br />
-            Turn chaos into clarity with zero latency.
+            Real-time data processing for enterprise scale. Turn chaos into<br />
+            clarity with zero latency.
           </p>
         </div>
       </section>
@@ -242,14 +238,14 @@ const ProductDetail = () => {
                 key={index}
                 className="bg-white border flex flex-col"
                 style={{
-                  width: '100%',
-                  maxWidth: '296px',
-                  height: '190px',
+                  width: '296px',
+                  height: '232px',
+                  padding: '32px',
                   borderRadius: '16px',
                   borderWidth: '1px',
                   borderColor: '#E2E8F0',
                   borderStyle: 'solid',
-                  padding: '32px'
+                  maxWidth: '100%'
                 }}
               >
                 {/* Icon - Top Left */}
@@ -267,16 +263,16 @@ const ProductDetail = () => {
 
                 {/* Title */}
                 <h3 
-                  className="text-lg sm:text-xl md:text-2xl font-bold"
-                  style={{ color: '#000000', marginBottom: '8px' }}
+                  className="font-bold"
+                  style={{ color: '#000000', fontSize: '24px', marginBottom: '8px', marginTop: '16px' }}
                 >
                   {capability.title}
                 </h3>
 
                 {/* Subtitle */}
                 <div 
-                  className="text-xs sm:text-sm uppercase tracking-wider mt-auto"
-                  style={{ color: '#64748B', fontWeight: 500 }}
+                  className="uppercase tracking-wider mt-auto"
+                  style={{ color: '#64748B', fontWeight: 500, fontSize: '20px' }}
                 >
                   {capability.subtitle}
                 </div>
@@ -322,28 +318,41 @@ const ProductDetail = () => {
         <div 
           className="mx-auto"
           style={{
-            width: '1440px',
-            maxWidth: '100%',
-            height: 'clamp(300px, 40vh, 400px)',
-            paddingTop: '32px',
-            paddingRight: '80px',
-            paddingBottom: '32px',
-            paddingLeft: '80px',
-            gap: '32px',
+            width: '100%',
+            maxWidth: '1441px',
+            height: 'clamp(400px, 50vh, 487px)',
+            minHeight: '400px',
+            gap: '10px',
+            paddingTop: 'clamp(16px, 2vw, 32px)',
+            paddingRight: 'clamp(16px, 4vw, 80px)',
+            paddingBottom: 'clamp(16px, 2vw, 32px)',
+            paddingLeft: 'clamp(16px, 4vw, 80px)',
             borderRightWidth: '1px',
             borderRightStyle: 'solid',
             borderRightColor: '#475569',
             backgroundColor: '#020617'
           }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center" style={{ gap: '32px', height: '100%' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-start" style={{ gap: '32px', height: '100%' }}>
             {/* Left Content Area */}
-            <div className="flex flex-col">
+            <div className="flex flex-col" style={{ paddingTop: '24px' }}>
               {/* Small Label */}
               <div 
-                className="text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2"
-                style={{ color: '#94A3B8', fontWeight: 500 }}
+                className="flex items-center gap-2 text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2"
+                style={{ color: '#FFFFFF', fontWeight: 600 }}
               >
+                <img 
+                  src={SystemDesignIcon} 
+                  alt="System Design" 
+                  style={{ 
+                    width: '18px', 
+                    height: '18px',
+                    top: '3px',
+                    left: '3px',
+                    position: 'relative',
+                    objectFit: 'contain'
+                  }} 
+                />
                 SYSTEM DIAGRAM
               </div>
 
@@ -372,26 +381,31 @@ const ProductDetail = () => {
               className="border flex items-center justify-center"
               style={{
                 width: '100%',
-                maxWidth: '600px',
-                height: '320px',
+                maxWidth: '674px',
+                height: 'clamp(300px, 40vh, 367px)',
+                minHeight: '300px',
+                gap: '24px',
+                paddingLeft: 'clamp(16px, 2vw, 32px)',
+                paddingRight: 'clamp(16px, 2vw, 32px)',
+                paddingBottom: 'clamp(16px, 2vw, 32px)',
+                paddingTop: 'clamp(16px, 2vw, 32px)',
+                marginTop: 'clamp(12px, 2vw, 24px)',
                 borderRadius: '16px',
                 borderWidth: '1px',
                 borderStyle: 'solid',
                 borderColor: '#475569',
-                backgroundColor: '#020617',
-                padding: '32px',
-                gap: '24px'
+                backgroundColor: '#020617'
               }}
             >
               {/* System Nodes - Horizontal Flow */}
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center flex-wrap" style={{ gap: 'clamp(8px, 2vw, 16px)' }}>
                 {/* Node 1 - Client / Device */}
                 <div className="flex items-center">
                   <div 
                     className="rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '64px',
-                      height: '64px',
+                      width: 'clamp(48px, 6vw, 64px)',
+                      height: 'clamp(48px, 6vw, 64px)',
                       backgroundColor: '#1E293B'
                     }}
                   >
@@ -399,8 +413,8 @@ const ProductDetail = () => {
                       src={PhoneLaptopIcon} 
                       alt="Client / Device"
                       style={{
-                        width: '28px',
-                        height: '28px',
+                        width: 'clamp(20px, 3vw, 28px)',
+                        height: 'clamp(20px, 3vw, 28px)',
                         objectFit: 'contain',
                         filter: 'brightness(0) invert(1)'
                       }}
@@ -411,12 +425,12 @@ const ProductDetail = () => {
                 {/* Connection Line */}
                 <div 
                   style={{ 
-                    width: '93px',
+                    width: 'clamp(40px, 8vw, 93px)',
                     height: '0px',
                     borderWidth: '1px',
                     borderStyle: 'solid',
                     borderColor: '#FFFFFF',
-                    margin: '0 8px'
+                    margin: '0 clamp(4px, 1vw, 8px)'
                   }}
                 ></div>
 
@@ -425,8 +439,8 @@ const ProductDetail = () => {
                   <div 
                     className="rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '64px',
-                      height: '64px',
+                      width: 'clamp(48px, 6vw, 64px)',
+                      height: 'clamp(48px, 6vw, 64px)',
                       backgroundColor: '#1E293B'
                     }}
                   >
@@ -434,8 +448,8 @@ const ProductDetail = () => {
                       src={SmartThingIcon} 
                       alt="Distributed Processing / Network"
                       style={{
-                        width: '28px',
-                        height: '28px',
+                        width: 'clamp(20px, 3vw, 28px)',
+                        height: 'clamp(20px, 3vw, 28px)',
                         objectFit: 'contain',
                         filter: 'brightness(0) invert(1)'
                       }}
@@ -446,12 +460,12 @@ const ProductDetail = () => {
                 {/* Connection Line */}
                 <div 
                   style={{ 
-                    width: '93px',
+                    width: 'clamp(40px, 8vw, 93px)',
                     height: '0px',
                     borderWidth: '1px',
                     borderStyle: 'solid',
                     borderColor: '#FFFFFF',
-                    margin: '0 8px'
+                    margin: '0 clamp(4px, 1vw, 8px)'
                   }}
                 ></div>
 
@@ -460,8 +474,8 @@ const ProductDetail = () => {
                   <div 
                     className="rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '64px',
-                      height: '64px',
+                      width: 'clamp(48px, 6vw, 64px)',
+                      height: 'clamp(48px, 6vw, 64px)',
                       backgroundColor: '#1E293B'
                     }}
                   >
@@ -469,8 +483,8 @@ const ProductDetail = () => {
                       src={Icon20131} 
                       alt="Database / Storage"
                       style={{
-                        width: '28px',
-                        height: '28px',
+                        width: 'clamp(20px, 3vw, 28px)',
+                        height: 'clamp(20px, 3vw, 28px)',
                         objectFit: 'contain',
                         filter: 'brightness(0) invert(1)'
                       }}
