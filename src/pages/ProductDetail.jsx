@@ -170,16 +170,16 @@ const ProductDetail = () => {
       <section className="w-full pb-8 sm:pb-10 lg:pb-12">
         <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           <div 
-            className="relative"
+            className="relative mx-auto lg:!h-[596px]"
             style={{
               width: '1280px',
-              height: '596px',
+              height: 'clamp(250px, 35vh, 350px)',
+              maxWidth: '100%',
               borderRadius: '16px',
               backgroundImage: `url(${ProductBanner})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'grayscale(100%)',
-              maxWidth: '100%'
+              filter: 'grayscale(100%)'
             }}
           >
             {/* Greyish Overlay */}
@@ -232,20 +232,19 @@ const ProductDetail = () => {
           </h2>
 
           {/* Capabilities Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '10px' }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: 'clamp(8px, 1.5vw, 10px)' }}>
             {product.capabilities.map((capability, index) => (
               <div
                 key={index}
                 className="bg-white border flex flex-col"
                 style={{
-                  width: '296px',
-                  height: '232px',
-                  padding: '32px',
+                  width: '100%',
+                  height: 'clamp(200px, 30vh, 232px)',
+                  padding: 'clamp(20px, 3vw, 32px)',
                   borderRadius: '16px',
                   borderWidth: '1px',
                   borderColor: '#E2E8F0',
-                  borderStyle: 'solid',
-                  maxWidth: '100%'
+                  borderStyle: 'solid'
                 }}
               >
                 {/* Icon - Top Left */}
@@ -264,7 +263,12 @@ const ProductDetail = () => {
                 {/* Title */}
                 <h3 
                   className="font-bold"
-                  style={{ color: '#000000', fontSize: '24px', marginBottom: '8px', marginTop: '16px' }}
+                  style={{ 
+                    color: '#000000', 
+                    fontSize: 'clamp(18px, 3vw, 24px)', 
+                    marginBottom: '8px', 
+                    marginTop: 'clamp(12px, 2vw, 16px)' 
+                  }}
                 >
                   {capability.title}
                 </h3>
@@ -272,7 +276,11 @@ const ProductDetail = () => {
                 {/* Subtitle */}
                 <div 
                   className="uppercase tracking-wider mt-auto"
-                  style={{ color: '#64748B', fontWeight: 500, fontSize: '20px' }}
+                  style={{ 
+                    color: '#64748B', 
+                    fontWeight: 500, 
+                    fontSize: 'clamp(14px, 2.5vw, 20px)' 
+                  }}
                 >
                   {capability.subtitle}
                 </div>
@@ -283,7 +291,7 @@ const ProductDetail = () => {
       </section>
 
       {/* Technical Architecture Section */}
-      <section className="w-full bg-white pt-12 sm:pt-16 lg:pt-20">
+      <section className="w-full bg-white" style={{ paddingTop: 'clamp(24px, 4vw, 80px)', paddingBottom: 'clamp(24px, 4vw, 48px)' }}>
         <div 
           className="mx-auto"
           style={{
@@ -300,7 +308,7 @@ const ProductDetail = () => {
             style={{ 
               color: '#000000', 
               fontWeight: 600,
-              marginBottom: '48px'
+              marginBottom: 'clamp(24px, 3vw, 48px)'
             }}
           >
             Technical Architecture
@@ -312,16 +320,19 @@ const ProductDetail = () => {
       <section 
         className="w-full"
         style={{ 
-          backgroundColor: '#020617'
+          backgroundColor: '#020617',
+          paddingTop: 'clamp(24px, 4vw, 48px)',
+          paddingBottom: 'clamp(24px, 4vw, 48px)',
+          marginBottom: 'clamp(24px, 4vw, 48px)',
+          position: 'relative',
+          zIndex: 0
         }}
       >
         <div 
-          className="mx-auto"
+          className="mx-auto lg:w-[1441px] lg:h-[387px] lg:min-h-[387px] lg:max-h-[287px] min-h-[600px]"
           style={{
             width: '100%',
             maxWidth: '1441px',
-            height: 'clamp(400px, 50vh, 487px)',
-            minHeight: '400px',
             gap: '10px',
             paddingTop: 'clamp(16px, 2vw, 32px)',
             paddingRight: 'clamp(16px, 4vw, 80px)',
@@ -333,12 +344,12 @@ const ProductDetail = () => {
             backgroundColor: '#020617'
           }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-start" style={{ gap: '32px', height: '100%' }}>
-            {/* Left Content Area */}
-            <div className="flex flex-col" style={{ paddingTop: '24px' }}>
-              {/* Small Label */}
+          <div className="flex flex-col lg:grid lg:grid-cols-2 items-start lg:h-[287px]" style={{ gap: '32px' }}>
+            {/* Left Content Area - First on desktop (left), Third on mobile */}
+            <div className="flex flex-col w-full order-3 lg:order-1 lg:pt-0" style={{ paddingTop: '24px' }}>
+              {/* Small Label - Hidden on mobile, shown on desktop */}
               <div 
-                className="flex items-center gap-2 text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2"
+                className="hidden lg:flex items-center gap-2 text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2"
                 style={{ color: '#FFFFFF', fontWeight: 600 }}
               >
                 <img 
@@ -369,18 +380,14 @@ const ProductDetail = () => {
                 className="text-base sm:text-lg leading-relaxed"
                 style={{ color: '#94A3B8', fontWeight: 400, maxWidth: '480px' }}
               >
-                Built on a decoupled architecture leveraging Kubernetes for<br />
-                intelligent auto-scaling. Data flows through our proprietary<br />
-                ingest engine before being distributed to isolated processing<br />
-                nodes.
+                Built on a decoupled architecture leveraging Kubernetes for intelligent auto-scaling. Data flows through our proprietary ingest engine before being distributed to isolated processing nodes.
               </p>
             </div>
 
-            {/* Right Architecture Diagram Card */}
+            {/* Right Architecture Diagram Card - Second on desktop (right), Second on mobile */}
             <div 
-              className="border flex items-center justify-center"
+              className="border flex items-center justify-center w-full order-2 lg:order-2"
               style={{
-                width: '100%',
                 maxWidth: '674px',
                 height: 'clamp(300px, 40vh, 367px)',
                 minHeight: '300px',
@@ -389,7 +396,7 @@ const ProductDetail = () => {
                 paddingRight: 'clamp(16px, 2vw, 32px)',
                 paddingBottom: 'clamp(16px, 2vw, 32px)',
                 paddingTop: 'clamp(16px, 2vw, 32px)',
-                marginTop: 'clamp(12px, 2vw, 24px)',
+                marginTop: '0',
                 borderRadius: '16px',
                 borderWidth: '1px',
                 borderStyle: 'solid',
@@ -493,12 +500,34 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
+
+            {/* SYSTEM DIAGRAM Label - First on mobile, hidden on desktop */}
+            <div className="flex flex-col lg:hidden w-full order-1">
+              <div 
+                className="flex items-center gap-2 text-xs sm:text-sm uppercase tracking-widest mb-4"
+                style={{ color: '#FFFFFF', fontWeight: 600 }}
+              >
+                <img 
+                  src={SystemDesignIcon} 
+                  alt="System Design" 
+                  style={{ 
+                    width: '18px', 
+                    height: '18px',
+                    top: '3px',
+                    left: '3px',
+                    position: 'relative',
+                    objectFit: 'contain'
+                  }} 
+                />
+                SYSTEM DIAGRAM
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Industries Solution Section */}
-      <section className="w-full bg-white pt-12 sm:pt-16 lg:pt-20">
+      <section className="w-full bg-white" style={{ paddingTop: 'clamp(24px, 4vw, 80px)', marginTop: '0', position: 'relative', zIndex: 1 }}>
         <div 
           className="mx-auto"
           style={{
@@ -512,13 +541,32 @@ const ProductDetail = () => {
           {/* Section Title */}
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-12 tracking-[-0.02em]"
-            style={{ color: '#000000', fontWeight: 600, marginBottom: '48px' }}
+            style={{ color: '#000000', fontWeight: 600, marginBottom: 'clamp(24px, 3vw, 48px)' }}
           >
             Industries Solution
           </h2>
 
-          {/* Industry Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: '32px' }}>
+          {/* Industry Cards Grid - Scrollable on mobile */}
+          <div 
+            className="lg:grid lg:grid-cols-3 overflow-x-auto"
+            style={{ 
+              gap: 'clamp(16px, 2vw, 32px)',
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              marginLeft: 'clamp(-16px, -4vw, -60px)',
+              marginRight: 'clamp(-16px, -4vw, -60px)',
+              paddingLeft: 'clamp(16px, 4vw, 60px)',
+              paddingRight: 'clamp(16px, 4vw, 60px)',
+              paddingBottom: '8px'
+            }}
+          >
+            <style>{`
+              .overflow-x-auto::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
+            <div className="flex lg:contents" style={{ gap: 'clamp(16px, 2vw, 32px)', width: 'max-content' }}>
             {[
               {
                 icon: PaychequeIcon,
@@ -538,17 +586,16 @@ const ProductDetail = () => {
             ].map((industry, index) => (
               <div
                 key={index}
-                className="bg-white border flex flex-col"
+                className="bg-white border flex flex-col flex-shrink-0"
                 style={{
-                  width: '100%',
-                  maxWidth: '400px',
-                  height: '442px',
+                  width: 'clamp(280px, 40vw, 400px)',
+                  height: 'clamp(380px, 50vh, 442px)',
                   borderRadius: '16px',
                   borderWidth: '1px',
                   borderStyle: 'solid',
                   borderColor: '#E2E8F0',
-                  padding: '32px',
-                  gap: '24px'
+                  padding: 'clamp(24px, 3vw, 32px)',
+                  gap: 'clamp(16px, 2vw, 24px)'
                 }}
               >
                 {/* Icon Container - Top Left */}
@@ -575,19 +622,25 @@ const ProductDetail = () => {
 
                 {/* Title */}
                 <h3 
-                  className="text-xl sm:text-2xl font-semibold"
-                  style={{ color: '#000000', fontWeight: 600, marginBottom: '4px' }}
+                  className="font-semibold"
+                  style={{ 
+                    color: '#000000', 
+                    fontWeight: 600, 
+                    marginBottom: '4px',
+                    fontSize: 'clamp(18px, 2.5vw, 24px)'
+                  }}
                 >
                   {industry.title}
                 </h3>
 
                 {/* Description */}
                 <p 
-                  className="text-base sm:text-lg leading-relaxed flex-grow"
+                  className="leading-relaxed flex-grow"
                   style={{ 
                     color: '#475569', 
                     fontWeight: 400,
-                    lineHeight: '1.6'
+                    lineHeight: '1.6',
+                    fontSize: 'clamp(14px, 1.8vw, 18px)'
                   }}
                 >
                   {industry.description}
@@ -595,13 +648,18 @@ const ProductDetail = () => {
 
                 {/* Bottom CTA */}
                 <div 
-                  className="text-sm sm:text-base font-medium mt-auto"
-                  style={{ color: '#0F172A', fontWeight: 500 }}
+                  className="font-medium mt-auto"
+                  style={{ 
+                    color: '#020617', 
+                    fontWeight: 600,
+                    fontSize: 'clamp(12px, 1.5vw, 16px)'
+                  }}
                 >
                   View Case Studies
                 </div>
               </div>
             ))}
+            </div>
           </div>
 
           {/* Trusted By Section */}
@@ -629,32 +687,85 @@ const ProductDetail = () => {
 
             {/* Logos Row */}
             <div 
-              className="flex flex-wrap items-center justify-center"
+              className="lg:flex lg:flex-wrap lg:items-center lg:justify-center overflow-hidden lg:overflow-x-visible"
               style={{
-                gap: 'clamp(32px, 4vw, 64px)' // Responsive gap: smaller on tablet/mobile
+                gap: 'clamp(32px, 4vw, 64px)'
               }}
             >
-              {[LogoIpsum1, LogoIpsum2, LogoIpsum3, LogoIpsum4, Logo].map((logo, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center"
-                  style={{
-                    height: '32px'
-                  }}
-                >
-                  <img 
-                    src={logo} 
-                    alt={`Logo ${index + 1}`}
+              <style>{`
+                @keyframes marquee {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+                .marquee-container {
+                  display: flex;
+                  width: max-content;
+                  animation: marquee 40s linear infinite;
+                }
+                .marquee-container:hover {
+                  animation-play-state: paused;
+                }
+                @media (min-width: 1024px) {
+                  .marquee-container {
+                    animation: none;
+                  }
+                }
+              `}</style>
+              {/* Desktop View - Normal Layout */}
+              <div className="hidden lg:contents">
+                {[LogoIpsum1, LogoIpsum2, LogoIpsum3, LogoIpsum4, Logo].map((logo, index) => (
+                  <div
+                    key={`desktop-${index}`}
+                    className="flex items-center justify-center"
                     style={{
-                      height: '32px',
-                      width: 'auto',
-                      objectFit: 'contain',
-                      filter: index === 4 ? 'grayscale(100%)' : 'none', // LogoIpsum5 - grayscale, others black
-                      opacity: 1
+                      height: '32px'
                     }}
-                  />
+                  >
+                    <img 
+                      src={logo} 
+                      alt={`Logo ${index + 1}`}
+                      style={{
+                        height: '32px',
+                        width: 'auto',
+                        objectFit: 'contain',
+                        filter: index === 4 ? 'grayscale(100%)' : 'none',
+                        opacity: 1
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+              {/* Mobile View - Marquee Scroll */}
+              <div className="flex lg:hidden overflow-hidden w-full">
+                <div className="marquee-container" style={{ gap: 'clamp(32px, 4vw, 64px)' }}>
+                  {/* Duplicate logos for seamless loop */}
+                  {[...[LogoIpsum1, LogoIpsum2, LogoIpsum3, LogoIpsum4, Logo], ...[LogoIpsum1, LogoIpsum2, LogoIpsum3, LogoIpsum4, Logo]].map((logo, index) => (
+                    <div
+                      key={`mobile-${index}`}
+                      className="flex items-center justify-center flex-shrink-0"
+                      style={{
+                        height: '32px'
+                      }}
+                    >
+                      <img 
+                        src={logo} 
+                        alt={`Logo ${index + 1}`}
+                        style={{
+                          height: '32px',
+                          width: 'auto',
+                          objectFit: 'contain',
+                          filter: (index === 4 || index === 9) ? 'grayscale(100%)' : 'none',
+                          opacity: 1
+                        }}
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </section>
         </div>

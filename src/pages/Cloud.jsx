@@ -48,14 +48,16 @@ const Cloud = () => {
         {/* Image */}
         <div
           style={{
-            width: '1282px',
-            height: '552px',
+            width: '100%',
+            maxWidth: '1282px',
+            height: 'clamp(400px, 40vh, 552px)',
             gap: '10px',
             borderRadius: '16px',
-            paddingTop: '72px',
-            paddingBottom: '72px',
+            paddingTop: 'clamp(32px, 5vw, 72px)',
+            paddingBottom: 'clamp(32px, 5vw, 72px)',
+            paddingLeft: 'clamp(16px, 2vw, 40px)',
+            paddingRight: 'clamp(16px, 2vw, 40px)',
             backgroundColor: '#FAFAFA',
-            maxWidth: '100%',
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
@@ -67,13 +69,14 @@ const Cloud = () => {
             alt="Cloud Infrastructure" 
             className="rounded-lg"
             style={{
-              width: '1282px',
-              height: '408px',
+              width: '100%',
+              maxWidth: '1282px',
+              height: 'auto',
+              maxHeight: 'clamp(300px, 30vh, 408px)',
               gap: '61px',
               objectFit: 'contain',
               display: 'block',
-              borderRadius: '16px',
-              maxWidth: '100%'
+              borderRadius: '16px'
             }}
           />
         </div>
@@ -201,15 +204,15 @@ const Cloud = () => {
                     >
                       {/* Number */}
                       <span 
-                        className="text-sm sm:text-base md:text-lg font-medium"
-                        style={{ color: '#64748B', fontWeight: 500 }}
+                        className="font-medium"
+                        style={{ color: '#64748B', fontWeight: 500, fontSize: '20px', lineHeight: '28px' }}
                       >
                         {idx + 1}.
                       </span>
                       {/* Feature Text */}
                       <span 
-                        className="text-sm sm:text-base md:text-lg font-medium"
-                        style={{ color: '#64748B', fontWeight: 500, fontSize: '20px' }}
+                        className="font-medium"
+                        style={{ color: '#64748B', fontWeight: 500, fontSize: '20px', lineHeight: '28px' }}
                       >
                         {feature}
                       </span>

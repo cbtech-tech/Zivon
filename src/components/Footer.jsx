@@ -40,7 +40,7 @@ const Footer = () => {
                     About
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
@@ -57,7 +57,7 @@ const Footer = () => {
                   >
                     Press
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -91,7 +91,7 @@ const Footer = () => {
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
                     style={{ color: '#000000' }}
                   >
-                    Data Intelligence
+                   AI & Data
                   </Link>
                 </li>
               </ul>

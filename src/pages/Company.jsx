@@ -56,9 +56,13 @@ const Company = () => {
           <div className="w-full">
             <h1 
               className="font-bold leading-tight"
-              style={{ color: '#FFFFFF', fontSize: '72px', fontWeight: 700 }}
+              style={{ 
+                color: '#FFFFFF', 
+                fontSize: 'clamp(28px, 6vw, 72px)', 
+                fontWeight: 700
+              }}
             >
-              Building the Future of <br />
+              <span style={{ whiteSpace: 'nowrap' }}>Building the Future of</span><br />
               Software
             </h1>
           </div>
@@ -90,13 +94,19 @@ const Company = () => {
               
               {/* Body Text */}
               <p 
-                className="text-base sm:text-lg lg:text-xl leading-relaxed"
-                style={{ color: '#64748B', fontWeight: 400 }}
+                className="leading-relaxed"
+                style={{ 
+                  color: '#64748B', 
+                  fontWeight: 400, 
+                  whiteSpace: 'pre-line',
+                  fontSize: 'clamp(14px, 2vw, 20px)',
+                  lineHeight: '1.6'
+                }}
               >
-                We believe in technology that empowers humanity. Our<br />
-                mission is to create tools that are intuitive, powerful, and<br />
-                accessible to everyone, everywhere. We don't just write<br />
-                code; we craft experiences that bridge the gap between<br />
+                We believe in technology that empowers humanity. Our{'\n'}
+                mission is to create tools that are intuitive, powerful,{'\n'}
+                and accessible to everyone, everywhere. We don't just write{'\n'}
+                code; we craft experiences that bridge the gap between{'\n'}
                 complex problems and simple solutions.
               </p>
             </div>
@@ -111,75 +121,137 @@ const Company = () => {
                 Our Journey
               </h2>
 
-              {/* Timeline */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                {/* Timeline Items 1 & 3 - Left Column (Stacked) */}
-                <div className="space-y-6 sm:space-y-8">
-                  {/* Timeline Item 1 */}
-                  <div>
-                    <div 
-                      className="mb-2"
-                      style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
-                    >
-                      2010
-                    </div>
-                    <h3 
-                      className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3"
-                      style={{ color: '#000000' }}
-                    >
-                      Founded in San Francisco
-                    </h3>
-                    <p 
-                      className="text-base sm:text-lg leading-relaxed"
-                      style={{ color: '#64748B', fontWeight: 400 }}
-                    >
-                      Started in a garage with a vision to simplify cloud computing for small businesses.
-                    </p>
-                  </div>
+              {/* Timeline - Mobile: Vertical with dots, Desktop: 2-column grid */}
+              <div className="relative w-full">
+                {/* Vertical Timeline Line - Mobile only */}
+                <div 
+                  className="absolute left-0 top-0 bottom-0 md:hidden z-0"
+                  style={{
+                    width: '2px',
+                    backgroundColor: '#E2E8F0',
+                    left: '8px',
+                    top: 'clamp(20px, 3vw, 40px)',
+                    height: 'calc(100% - clamp(20px, 3vw, 40px))',
+                    marginLeft: '-1px'
+                  }}
+                ></div>
 
-                  {/* Timeline Item 3 */}
-                  <div>
-                    <div 
-                      className="mb-2"
-                      style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
-                    >
-                      2023
+                {/* Mobile: Vertical Timeline */}
+                <div className="md:hidden space-y-8">
+                  {[
+                    { year: '2010', title: 'Founded in San Francisco', description: 'Started in a garage with a vision to simplify cloud computing for small businesses.' },
+                    { year: '2015', title: 'Reached 1 Million Users', description: 'Our flagship product became the industry standard, serving users across 5 continents.' },
+                    { year: '2023', title: 'Global IPO', description: 'Listed on the NYSE, marking a new chapter of innovation and global expansion.' }
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-4 relative">
+                      {/* Timeline Dot */}
+                      <div className="flex-shrink-0 relative z-10">
+                        <div 
+                          className="rounded-full"
+                          style={{
+                            width: '16px',
+                            height: '16px',
+                            backgroundColor: '#FFFFFF',
+                            border: '2px solid #E2E8F0',
+                            boxShadow: '0 0 0 2px #FFFFFF'
+                          }}
+                        ></div>
+                      </div>
+                      {/* Content */}
+                      <div className="flex-1">
+                        <div 
+                          className="mb-2"
+                          style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
+                        >
+                          {item.year}
+                        </div>
+                        <h3 
+                          className="text-lg font-bold mb-2"
+                          style={{ color: '#000000' }}
+                        >
+                          {item.title}
+                        </h3>
+                        <p 
+                          className="text-base leading-relaxed"
+                          style={{ color: '#64748B', fontWeight: 400 }}
+                        >
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                    <h3 
-                      className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3"
-                      style={{ color: '#000000' }}
-                    >
-                      Global IPO
-                    </h3>
-                    <p 
-                      className="text-base sm:text-lg leading-relaxed"
-                      style={{ color: '#64748B', fontWeight: 400 }}
-                    >
-                      Listed on the NYSE, marking a new chapter of innovation and global expansion.
-                    </p>
-                  </div>
+                  ))}
                 </div>
 
-                {/* Timeline Item 2 - Right Column */}
-                <div>
-                  <div 
-                    className="mb-2"
-                    style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
-                  >
-                    2015
+                {/* Desktop: 2-column grid */}
+                <div className="hidden md:grid md:grid-cols-2 gap-6 sm:gap-8">
+                  {/* Timeline Items 1 & 3 - Left Column (Stacked) */}
+                  <div className="space-y-6 sm:space-y-8">
+                    {/* Timeline Item 1 */}
+                    <div>
+                      <div 
+                        className="mb-2"
+                        style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
+                      >
+                        2010
+                      </div>
+                      <h3 
+                        className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3"
+                        style={{ color: '#000000' }}
+                      >
+                        Founded in San Francisco
+                      </h3>
+                      <p 
+                        className="text-base sm:text-lg leading-relaxed"
+                        style={{ color: '#64748B', fontWeight: 400 }}
+                      >
+                        Started in a garage with a vision to simplify cloud computing for small businesses.
+                      </p>
+                    </div>
+
+                    {/* Timeline Item 3 */}
+                    <div>
+                      <div 
+                        className="mb-2"
+                        style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
+                      >
+                        2023
+                      </div>
+                      <h3 
+                        className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3"
+                        style={{ color: '#000000' }}
+                      >
+                        Global IPO
+                      </h3>
+                      <p 
+                        className="text-base sm:text-lg leading-relaxed"
+                        style={{ color: '#64748B', fontWeight: 400 }}
+                      >
+                        Listed on the NYSE, marking a new chapter of innovation and global expansion.
+                      </p>
+                    </div>
                   </div>
-                  <h3 
-                    className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3"
-                    style={{ color: '#000000' }}
-                  >
-                    Reached 1 Million Users
-                  </h3>
-                  <p 
-                    className="text-base sm:text-lg leading-relaxed"
-                    style={{ color: '#64748B', fontWeight: 400 }}
-                  >
-                    Our flagship product became the industry standard, serving users across 5 continents.
-                  </p>
+
+                  {/* Timeline Item 2 - Right Column */}
+                  <div>
+                    <div 
+                      className="mb-2"
+                      style={{ color: '#000000', fontWeight: 500, fontSize: '14px' }}
+                    >
+                      2015
+                    </div>
+                    <h3 
+                      className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3"
+                      style={{ color: '#000000' }}
+                    >
+                      Reached 1 Million Users
+                    </h3>
+                    <p 
+                      className="text-base sm:text-lg leading-relaxed"
+                      style={{ color: '#64748B', fontWeight: 400 }}
+                    >
+                      Our flagship product became the industry standard, serving users across 5 continents.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -199,7 +271,7 @@ const Company = () => {
           </h2>
 
           {/* Stats Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '24px' }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: 'clamp(12px, 2vw, 24px)' }}>
             {[
               {
                 icon: PeopleIcon,
@@ -226,13 +298,12 @@ const Company = () => {
                 key={index}
                 className="bg-white border relative"
                 style={{
-                  width: '296px',
-                  height: '192px',
-                  padding: '32px',
+                  width: '100%',
+                  height: 'clamp(160px, 25vh, 192px)',
+                  padding: 'clamp(20px, 3vw, 32px)',
                   borderRadius: '16px',
                   borderWidth: '1px',
-                  borderColor: '#E2E8F0',
-                  maxWidth: '100%'
+                  borderColor: '#E2E8F0'
                 }}
               >
                 {/* Icon - Top Left */}
@@ -253,7 +324,7 @@ const Company = () => {
                   className="mb-2 sm:mb-3"
                   style={{ 
                     color: '#000000',
-                    fontSize: '30px',
+                    fontSize: 'clamp(20px, 3vw, 30px)',
                     fontWeight: 600
                   }}
                 >
@@ -265,7 +336,7 @@ const Company = () => {
                   className="uppercase tracking-wider"
                   style={{ 
                     color: '#475569', 
-                    fontSize: '20px',
+                    fontSize: 'clamp(14px, 2vw, 20px)',
                     fontWeight: 500
                   }}
                 >
@@ -288,8 +359,117 @@ const Company = () => {
             Core Values
           </h2>
 
-          {/* Core Values Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          {/* Core Values Grid - Scrollable on mobile */}
+          <div 
+            className="lg:hidden overflow-x-auto"
+            style={{ 
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              overflowY: 'hidden',
+              marginLeft: 'clamp(-16px, -4vw, -60px)',
+              marginRight: 'clamp(-16px, -4vw, -60px)',
+              paddingLeft: 'clamp(16px, 4vw, 60px)',
+              paddingRight: 'clamp(16px, 4vw, 60px)'
+            }}
+          >
+            <style>{`
+              .overflow-x-auto::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
+            <div 
+              className="flex"
+              style={{ 
+                gap: 'clamp(16px, 2vw, 32px)',
+                width: 'max-content',
+                paddingBottom: '8px'
+              }}
+            >
+            {[
+              {
+                icon: PeopleIcon,
+                title: 'User First',
+                description: 'Every line of code starts with empathy. We solve real problems for real people.'
+              },
+              {
+                icon: EyeIcon,
+                title: 'Transparency',
+                description: 'We share context, decisions, and outcomes openly with our teams and the community.'
+              },
+              {
+                icon: SettingsIcon,
+                title: 'Excellence',
+                description: 'We hold ourselves to the highest technical standards.'
+              },
+              {
+                icon: CompassIcon,
+                title: 'Ownership',
+                description: 'We take responsibility for our work end to end. Every team member is empowered to act decisively.'
+              }
+            ].map((value, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl border border-gray-200 relative flex-shrink-0"
+                style={{
+                  width: 'clamp(280px, 40vw, 296px)',
+                  height: 'clamp(320px, 45vh, 365px)',
+                  borderRadius: '16px',
+                  borderColor: '#E2E8F0',
+                  overflow: 'hidden'
+                }}
+              >
+                {/* Decorative Circle - Top Right */}
+                <div 
+                  className="absolute rounded-full"
+                  style={{
+                    backgroundColor: '#F1F5F9',
+                    width: 'clamp(100px, 12vw, 120px)',
+                    height: 'clamp(100px, 12vw, 120px)',
+                    top: '-30px',
+                    right: '-30px',
+                    zIndex: 0
+                  }}
+                ></div>
+
+                {/* Content Container */}
+                <div className="relative z-10" style={{ paddingTop: '32px', paddingLeft: '32px', paddingRight: '32px', paddingBottom: '32px' }}>
+                {/* Icon - Top Left */}
+                <div className="mb-4 sm:mb-6" style={{ width: '24px', height: '24px' }}>
+                  <img 
+                    src={value.icon} 
+                    alt={value.title}
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
+
+                {/* Title */}
+                <h3 
+                  className="font-bold mb-3 sm:mb-4 relative z-10"
+                  style={{ color: '#000000', fontSize: '24px', marginTop: '90px', letterSpacing: '0%' }}
+                >
+                  {value.title}
+                </h3>
+
+                {/* Description */}
+                <p 
+                  className="leading-relaxed"
+                  style={{ color: '#64748B', fontWeight: 400, fontSize: '20px', lineHeight: '25px' }}
+                >
+                  {value.description}
+                </p>
+                </div>
+              </div>
+            ))}
+            </div>
+          </div>
+          
+          {/* Desktop Grid - Hidden on mobile */}
+          <div className="hidden lg:grid lg:grid-cols-4" style={{ gap: 'clamp(16px, 2vw, 32px)' }}>
             {[
               {
                 icon: PeopleIcon,
@@ -316,12 +496,11 @@ const Company = () => {
                 key={index}
                 className="bg-white rounded-2xl border border-gray-200 relative"
                 style={{
-                  width: '296px',
-                  height: '365px',
+                  width: '100%',
+                  height: 'clamp(320px, 45vh, 365px)',
                   borderRadius: '16px',
                   borderColor: '#E2E8F0',
-                  overflow: 'hidden',
-                  maxWidth: '100%'
+                  overflow: 'hidden'
                 }}
               >
                 {/* Decorative Circle - Top Right */}
