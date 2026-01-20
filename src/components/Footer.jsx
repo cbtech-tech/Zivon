@@ -16,9 +16,12 @@ const Footer = () => {
               className="text-xl sm:text-2xl tracking-[-0.02em] mb-4 sm:mb-5 inline-block"
               style={{ color: '#000000' }}
             >
-              <span className="font-bold">AXON</span><span className="font-normal">CORP</span>
+              <span className="font-bold">AXON</span>
+              <span className="font-normal" style={{ color: "var(--Slate-500, #64748B)" }}>
+  CORP
+</span>
             </Link>
-            <p className="leading-relaxed" style={{ color: '#020617', fontWeight: 400, fontSize: '18px' }}>
+            <p className="leading-relaxed" style={{color: "var(--Slate-500, #64748B)", fontWeight: 400, fontSize: '18px' }}>
               Redefining what's possible in digital infrastructure.
             </p>
           </div>
@@ -27,7 +30,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 lg:gap-20">
             {/* Company Column */}
             <div>
-              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4 sm:mb-5 tracking-[-0.02em]">
+              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4 sm:mb-5 tracking-[-0.02em] uppercase">
                 Company
               </h3>
               <ul className="space-y-4 sm:space-y-5">
@@ -35,7 +38,7 @@ const Footer = () => {
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
-                    style={{ color: '#000000' }}
+                    style={{ color: "var(--Slate-500, #64748B)"}}
                   >
                     About
                   </Link>
@@ -63,7 +66,7 @@ const Footer = () => {
 
             {/* Services Column */}
             <div>
-              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4 sm:mb-5 tracking-[-0.02em]">
+              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4 sm:mb-5 tracking-[-0.02em] uppercase">
                 Services
               </h3>
               <ul className="space-y-4 sm:space-y-5">
@@ -71,7 +74,7 @@ const Footer = () => {
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
-                    style={{ color: '#000000' }}
+                    style={{ color: "var(--Slate-500, #64748B)"}}
                   >
                     Engineering
                   </Link>
@@ -80,7 +83,7 @@ const Footer = () => {
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
-                    style={{ color: '#000000' }}
+                    style={{ color: "var(--Slate-500, #64748B)" }}
                   >
                     Cloud Infrastructure
                   </Link>
@@ -89,7 +92,7 @@ const Footer = () => {
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
-                    style={{ color: '#000000' }}
+                    style={{ color: "var(--Slate-500, #64748B)" }}
                   >
                    AI & Data
                   </Link>
@@ -99,7 +102,7 @@ const Footer = () => {
 
             {/* Connect Column */}
             <div>
-              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4 sm:mb-5 tracking-[-0.02em]">
+              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4 sm:mb-5 tracking-[-0.02em] uppercase">
                 Connect
               </h3>
               <ul className="space-y-4 sm:space-y-5">
@@ -107,7 +110,7 @@ const Footer = () => {
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
-                    style={{ color: '#000000' }}
+                    style={{ color: "var(--Slate-500, #64748B)"}}
                   >
                     LinkedIn
                   </Link>
@@ -116,7 +119,7 @@ const Footer = () => {
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
-                    style={{ color: '#000000' }}
+                    style={{ color: "var(--Slate-500, #64748B)" }}
                   >
                     Twitter / X
                   </Link>
@@ -125,7 +128,7 @@ const Footer = () => {
                   <Link 
                     to="#" 
                     className="text-sm sm:text-base text-primary hover:underline transition-all"
-                    style={{ color: '#000000' }}
+                    style={{ color: "var(--Slate-500, #64748B)"}}
                   >
                     Contact Us
                   </Link>
@@ -139,7 +142,7 @@ const Footer = () => {
         <div className="pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
             {/* Copyright */}
-            <div className="text-sm sm:text-base" style={{ fontWeight: 400, color: '#020617' }}>
+            <div className="text-sm sm:text-base" style={{ fontWeight: 400, color: "var(--Slate-500, #64748B)" }}>
               © {currentYear} AxonCorp International. All Rights Reserved.
             </div>
 
@@ -148,14 +151,14 @@ const Footer = () => {
               <Link 
                 to="#" 
                 className="text-sm sm:text-base text-primary hover:underline transition-all"
-                style={{ color: '#000000' }}
+                style={{ color: "var(--Slate-500, #64748B)"}}
               >
                 Privacy
               </Link>
               <Link 
                 to="#" 
                 className="text-sm sm:text-base text-primary hover:underline transition-all"
-                style={{ color: '#000000' }}
+                style={{ color: "var(--Slate-500, #64748B)"}}
               >
                 Terms
               </Link>

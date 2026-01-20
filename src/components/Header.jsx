@@ -54,7 +54,10 @@ const Header = () => {
               onClick={closeMenu}
               style={{ color: '#000000' }}
             >
-              <span className="font-bold">AXON</span><span className="font-normal">CORP</span>
+              <span className="font-bold">AXON</span>
+              <span className="font-normal" style={{ color: "var(--Slate-500, #64748B)" }}>
+  CORP
+</span>
             </Link>
           </div>
           
