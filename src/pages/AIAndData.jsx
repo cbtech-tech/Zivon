@@ -84,8 +84,8 @@ const AIAndData = () => {
 
             {/* Title */}
             <h2 
-              className="font-bold mb-4 sm:mb-6 tracking-[-0.02em]"
-              style={{ color: '#000000', fontSize: '30px' }}
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 tracking-[-0.02em]"
+              style={{ color: '#000000' }}
             >
               Machine Learning
             </h2>
@@ -100,7 +100,7 @@ const AIAndData = () => {
 
             {/* Feature List Box */}
             <div 
-              className="border"
+              className="border ai-data-feature-box"
               style={{ 
                 width: '374px',
                 height: '148px',
@@ -112,6 +112,20 @@ const AIAndData = () => {
                 maxWidth: '100%'
               }}
             >
+              <style>{`
+                @media (max-width: 1023px) {
+                  .ai-data-feature-box span {
+                    font-size: 16px !important;
+                    line-height: 24px !important;
+                  }
+                }
+                @media (min-width: 1024px) {
+                  .ai-data-feature-box span {
+                    font-size: 18px !important;
+                    line-height: 28px !important;
+                  }
+                }
+              `}</style>
               {[
                 'Neural Network Architecture',
                 'Automated Decision Systems',
@@ -173,7 +187,7 @@ const AIAndData = () => {
 
             {/* Feature List Box */}
             <div 
-              className="border"
+              className="border ai-data-feature-box"
               style={{ 
                 width: '374px',
                 height: '148px',
@@ -218,10 +232,22 @@ const AIAndData = () => {
 
       {/* Success Metrics Section */}
       <section className="w-full bg-white pt-6 sm:pt-8 lg:pt-10 xl:pt-12 pb-12 sm:pb-16 lg:pb-20 xl:pb-24">
+        <style>{`
+          @media (max-width: 1023px) {
+            .success-metrics-label {
+              font-size: 16px !important;
+            }
+          }
+          @media (min-width: 1024px) {
+            .success-metrics-label {
+              font-size: 18px !important;
+            }
+          }
+        `}</style>
         <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
           {/* Section Heading */}
           <h2 
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-12 sm:mb-16 lg:mb-20 tracking-[-0.02em]"
+            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center mb-12 sm:mb-16 lg:mb-20 tracking-[-0.02em]"
             style={{ color: '#000000' }}
           >
             Success Metrics
@@ -276,7 +302,7 @@ const AIAndData = () => {
                 </div>
                 {/* Metric Label */}
                 <div 
-                  className="font-medium"
+                  className="font-medium success-metrics-label"
                   style={{ color: '#64748B', fontSize: '18px' }}
                 >
                   {metric.label}
