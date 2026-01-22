@@ -437,11 +437,11 @@ const ProductDetail = () => {
 
             {/* Right Architecture Diagram Card - Second on desktop (right), Second on mobile */}
             <div 
-              className="border flex items-center justify-center w-full order-2 lg:order-2"
+              className="border flex items-center justify-center w-full order-2 lg:order-2 inner-architecture-box"
               style={{
                 maxWidth: '674px',
-                height: 'clamp(300px, 40vh, 367px)',
-                minHeight: '300px',
+                height: 'clamp(200px, 30vh, 367px)',
+                minHeight: '200px',
                 gap: '24px',
                 paddingLeft: 'clamp(16px, 2vw, 32px)',
                 paddingRight: 'clamp(16px, 2vw, 32px)',
@@ -455,6 +455,14 @@ const ProductDetail = () => {
                 backgroundColor: '#020617'
               }}
             >
+              <style>{`
+                @media (min-width: 1024px) {
+                  .inner-architecture-box {
+                    height: 367px !important;
+                    min-height: 367px !important;
+                  }
+                }
+              `}</style>
               {/* System Nodes - Horizontal Flow */}
               <div className="flex items-center justify-center flex-wrap" style={{ gap: 'clamp(8px, 2vw, 16px)' }}>
                 {/* Node 1 - Client / Device */}

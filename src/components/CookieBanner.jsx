@@ -257,18 +257,32 @@ const CookieBanner = () => {
 
       {/* Cookie Banner - Hide when modal is open */}
       {showBanner && !showModal && (
-        <div
-          className="cookie-banner fixed bottom-0 left-0 right-0 z-[9998] bg-white border-t"
-          style={{
-            zIndex: 9998,
-            borderTopWidth: '1px',
-            borderTopColor: '#E2E8F0',
-            boxShadow: '0 -4px 6px -1px rgba(0, 0, 0, 0.1)',
-            padding: 'clamp(16px, 3vw, 24px)',
-            paddingLeft: 'clamp(16px, 4vw, 60px)',
-            paddingRight: 'clamp(16px, 4vw, 60px)'
-          }}
-        >
+        <>
+          <style>{`
+            @media (max-width: 767px) {
+              .cookie-banner-outer {
+                background-color: transparent !important;
+                border-top: none !important;
+                box-shadow: none !important;
+              }
+            }
+            @media (min-width: 768px) {
+              .cookie-banner-outer {
+                background-color: #FFFFFF !important;
+                border-top: 1px solid #E2E8F0 !important;
+                box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+              }
+            }
+          `}</style>
+          <div
+            className="cookie-banner cookie-banner-outer fixed bottom-0 left-0 right-0 z-[9998]"
+            style={{
+              zIndex: 9998,
+              padding: 'clamp(16px, 3vw, 24px)',
+              paddingLeft: 'clamp(16px, 4vw, 60px)',
+              paddingRight: 'clamp(16px, 4vw, 60px)'
+            }}
+          >
           <div 
             className="mx-auto"
             style={{ 
@@ -277,7 +291,14 @@ const CookieBanner = () => {
             }}
           >
             {/* Mobile Box Style */}
-            <div className="md:hidden border-2 border-black p-4 bg-white">
+            <div 
+              className="md:hidden p-4 bg-white"
+              style={{
+                marginLeft: 'clamp(2px, 0.5vw, 4px)',
+                marginRight: 'clamp(2px, 0.5vw, 4px)',
+                border: '1px solid var(--Slate-300, #CBD5E1)'
+              }}
+            >
               <h3 
                 className="text-lg font-semibold mb-2"
                 style={{ 
@@ -428,6 +449,7 @@ const CookieBanner = () => {
             </div>
           </div>
         </div>
+        </>
       )}
 
       {/* Preferences Modal */}

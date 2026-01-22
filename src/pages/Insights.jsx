@@ -562,6 +562,10 @@ const Insights = () => {
               width: clamp(280px, 30vw, 336px) !important;
               height: 200px !important;
             }
+            .article-title-1,
+            .article-title-2 {
+              font-size: 36px !important;
+            }
           }
         `}</style>
         <div className="mx-auto" style={{ maxWidth: '1440px', width: '100%', paddingLeft: 'clamp(16px, 4vw, 60px)', paddingRight: 'clamp(16px, 4vw, 60px)' }}>
@@ -585,10 +589,10 @@ const Insights = () => {
 
                 {/* Article Title */}
                 <h2 
-                  className="font-bold tracking-[-0.02em] mb-3"
+                  className="font-bold tracking-[-0.02em] mb-3 article-title-1"
                   style={{ 
                     color: '#000000',
-                    fontSize: '36px',
+                    fontSize: '30px',
                     fontWeight: 600,
                     lineHeight: '1.1'
                   }}
@@ -658,10 +662,10 @@ const Insights = () => {
 
               {/* Article Title */}
               <h2 
-                className="font-bold tracking-[-0.02em] mb-3"
+                className="font-bold tracking-[-0.02em] mb-3 article-title-2"
                 style={{ 
                   color: '#000000',
-                  fontSize: '36px',
+                  fontSize: '30px',
                   fontWeight: 600,
                   lineHeight: '1.1'
                 }}
