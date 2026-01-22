@@ -90,7 +90,12 @@ const Engineering = () => {
             className="text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed"
             style={{ color: '#64748B', fontWeight: 400 }}
           >
-            Delivering a comprehensive suite of software development services,<br></br> from enterprise-grade systems to high-performance user <br></br>experiences.
+            <span className="hidden lg:inline">
+              Delivering a comprehensive suite of software development services,<br></br> from enterprise-grade systems to high-performance user <br></br>experiences.
+            </span>
+            <span className="lg:hidden">
+              Delivering a comprehensive suite of software development services, from enterprise-grade systems to high-performance user experiences.
+            </span>
           </p>
         </div>
       </section>
@@ -159,32 +164,47 @@ const Engineering = () => {
               >
                 {capability.title === "Custom Software Engineering" && (
                   <>
-                    We build robust, enterprise-grade<br />
-                    scalable solutions tailored to<br />
-                    complex business logic. Our<br />
-                    engineering team focuses on<br />
-                    backend reliability and seamless<br />
-                    data orchestration.
+                    <span className="hidden lg:inline">
+                      We build robust, enterprise-grade<br />
+                      scalable solutions tailored to<br />
+                      complex business logic. Our<br />
+                      engineering team focuses on<br />
+                      backend reliability and seamless<br />
+                      data orchestration.
+                    </span>
+                    <span className="lg:hidden">
+                      We build robust, enterprise-grade scalable solutions tailored to complex business logic. Our engineering team focuses on backend reliability and seamless data orchestration.
+                    </span>
                   </>
                 )}
                 {capability.title === "Advanced Mobile & Web Applications" && (
                   <>
-                    <span style={{ whiteSpace: 'nowrap' }}>High-performance cross-platform</span><br />
-                    applications designed for speed<br />
-                    and native-level experience. We<br />
-                    leverage modern frameworks to<br />
-                    ensure consistent performance<br />
-                    across all devices.
+                    <span className="hidden lg:inline">
+                      <span style={{ whiteSpace: 'nowrap' }}>High-performance cross-platform</span><br />
+                      applications designed for speed<br />
+                      and native-level experience. We<br />
+                      leverage modern frameworks to<br />
+                      ensure consistent performance<br />
+                      across all devices.
+                    </span>
+                    <span className="lg:hidden">
+                      High-performance cross-platform applications designed for speed and native-level experience. We leverage modern frameworks to ensure consistent performance across all devices.
+                    </span>
                   </>
                 )}
                 {capability.title === "Modern Cloud Infrastructure" && (
                   <>
-                    Resilient cloud architectures<br />
-                    built on industry-leading<br />
-                    platforms. We specialize in<br />
-                    automated deployments,<br />
-                    self-healing systems, and global<br />
-                    content delivery.
+                    <span className="hidden lg:inline">
+                      Resilient cloud architectures<br />
+                      built on industry-leading<br />
+                      platforms. We specialize in<br />
+                      automated deployments,<br />
+                      self-healing systems, and global<br />
+                      content delivery.
+                    </span>
+                    <span className="lg:hidden">
+                      Resilient cloud architectures built on industry-leading platforms. We specialize in automated deployments, self-healing systems, and global content delivery.
+                    </span>
                   </>
                 )}
               </p>
